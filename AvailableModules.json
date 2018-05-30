@@ -1,0 +1,2038 @@
+{
+  "moduleData": [
+    {
+      "URL":"https://github.com/MichMich/MagicMirror/tree/master/modules/default/alert",
+      "identifier": "",
+      "mycroftname": "alert",
+      "name": "alert"
+    },
+    {
+      "URL":"https://github.com/MichMich/MagicMirror/tree/master/modules/default/updatenotification",
+      "identifier": "",
+      "mycroftname": "update notification",
+      "name": "updatenotification"
+    },
+    {
+      "URL":"https://github.com/MichMich/MagicMirror/tree/master/modules/default/clock",
+      "identifier": "",
+      "mycroftname": "clock",
+      "name": "clock"
+    },
+    {
+      "URL":"https://github.com/MichMich/MagicMirror/tree/master/modules/default/calendar",
+      "identifier": "",
+      "mycroftname": "calendar",
+      "name": "calendar"
+    },
+    {
+      "URL":"https://github.com/MichMich/MagicMirror/tree/master/modules/default/compliments",
+      "identifier": "",
+      "mycroftname": "compliments",
+      "name": "compliments"
+    },
+    {
+      "URL": "https://github.com/RedNax67/MMM-WunderGround",
+      "identifier": "",
+      "mycroftname": "weather",
+      "name": "MMM-WunderGround"
+    },
+    {
+      "URL": "https://github.com/SamLewis0602/MMM-Traffic",
+      "identifier": "",
+      "mycroftname": "traffic",
+      "name": "MMM-Traffic"
+    },
+    {
+      "URL": "https://github.com/vicmora/MMM-GoogleMapsTraffic",
+      "identifier": "",
+      "mycroftname": "google traffic map",
+      "name": "MMM-GoogleMapsTraffic"
+    },
+    {
+      "URL": "https://github.com/ronny3050/email-mirror",
+      "identifier": "",
+      "mycroftname": "email",
+      "name": "email"
+    },
+    {
+      "URL": "https://github.com/Jopyth/MMM-Remote-Control",
+      "identifier": "",
+      "mycroftname": "remote control",
+      "name": "MMM-Remote-Control"
+    },
+    {
+      "URL": "https://github.com/MichMich/MagicMirror/tree/master/modules/default/newsfeed",
+      "identifier": "",
+      "mycroftname": "news feed",
+      "name": "newsfeed"
+    },
+    {
+      "URL": "https://github.com/edward-shen/MMM-page-indicator",
+      "identifier": "",
+      "mycroftname": "page indicator",
+      "name": "MMM-page-indicator"
+    },
+    {
+      "URL": "https://github.com/eouia/MMM-Remote-Control-Repository",
+      "identifier": "",
+      "mycroftname": "remote control repository",
+      "name": "MMM-Remote-Control-Repository"
+    },
+    {
+      "URL": "https://github.com/ptrbld/MMM-Button",
+      "identifier": "",
+      "mycroftname": "button",
+      "name": "MMM-Button"
+    },
+    {
+      "URL": "https://github.com/Jopyth/MMM-Buttons",
+      "identifier": "",
+      "mycroftname": "buttons",
+      "name": "MMM-Buttons"
+    },
+    {
+      "URL": "https://github.com/barnabycolby/MMM-Carousel",
+      "identifier": "",
+      "mycroftname": "carousel",
+      "name": "MMM-Carousel"
+    },
+    {
+      "URL": "https://github.com/shbatm/MMM-Carousel",
+      "identifier": "",
+      "mycroftname": "carousel navigation",
+      "name": "MMM-Carousel w/ Navigation"
+    },
+    {
+      "URL": "https://github.com/sheyabernstein/MMM-connection-status",
+      "identifier": "",
+      "mycroftname": "connection status",
+      "name": "MMM-connection-status"
+    },
+    {
+      "URL": "https://github.com/masters1222/mm-hide-all",
+      "identifier": "",
+      "mycroftname": "hide all",
+      "name": "mm-hide-all"
+    },
+    {
+      "URL": "https://github.com/eouia/MMM-Glance",
+      "identifier": "",
+      "mycroftname": "glance",
+      "name": "MMM-Glance"
+    },
+    {
+      "URL": "https://github.com/ianperrin/MMM-ModuleScheduler",
+      "identifier": "",
+      "mycroftname": "module scheduler",
+      "name": "MMM-ModuleScheduler"
+    },
+    {
+      "URL": "https://github.com/shbatm/MMM-OnScreenMenu",
+      "identifier": "",
+      "mycroftname": "on screen menu",
+      "name": "MMM-OnScreenMenu"
+    },
+    {
+      "URL": "https://github.com/E3V3A/MMM-Tabulator",
+      "identifier": "",
+      "mycroftname": "tabulator",
+      "name": "MMM-Tabulator"
+    },
+    {
+      "URL": "https://github.com/valmassoi/MMM-bitcoin",
+      "identifier": "",
+      "mycroftname": "bitcoin",
+      "name": "MMM-bitcoin"
+    },
+    {
+      "URL": "https://github.com/Deathrid3r747/MMM-ethereum",
+      "identifier": "",
+      "mycroftname": "ethereum",
+      "name": "MMM-ethereum"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-LICE",
+      "identifier": "",
+      "mycroftname": "lice",
+      "name": "MMM-LICE"
+    },
+    {
+      "URL": "https://github.com/hakanmhmd/MMM-Stock",
+      "identifier": "",
+      "mycroftname": "stock",
+      "name": "MMM-Stock"
+    },
+    {
+      "URL": "https://github.com/alexyak/stocks",
+      "identifier": "",
+      "mycroftname": "stocks",
+      "name": "stocks"
+    },
+    {
+      "URL": "https://github.com/matteodanelli/MMM-cryptocurrency",
+      "identifier": "",
+      "mycroftname": "crypto currency",
+      "name": "MMM-cryptocurrency"
+    },
+    {
+      "URL": "https://github.com/spoturdeal/MMM-crypto-portfolio",
+      "identifier": "",
+      "mycroftname": "crypto portfolio",
+      "name": "MMM-crypto-portfolio"
+    },
+    {
+      "URL": "https://github.com/boghammar/MMM-CrisisInformationSweden",
+      "identifier": "",
+      "mycroftname": "crisis information sweden",
+      "name": "MMM-CrisisInformationSweden"
+    },
+    {
+      "URL": "https://github.com/arthurgarzajr/MMM-DailyBibleVerse.git",
+      "identifier": "",
+      "mycroftname": "daily bible verse",
+      "name": "MMM-DailyBibleVerse"
+    },
+    {
+      "URL": "https://github.com/slametps/MMM-RandomQuranAyah",
+      "identifier": "",
+      "mycroftname": "random quran ayah",
+      "name": "MMM-RandomQuranAyah"
+    },
+    {
+      "URL": "https://github.com/slametps/MMM-PrayerTime",
+      "identifier": "",
+      "mycroftname": "prayer time",
+      "name": "MMM-PrayerTime"
+    },
+    {
+      "URL": "https://github.com/sheyabernstein/MMM-shabbat",
+      "identifier": "",
+      "mycroftname": "shabbat",
+      "name": "MMM-shabbat"
+    },
+    {
+      "URL": "https://github.com/amcolash/MMM-GoogleFit",
+      "identifier": "",
+      "mycroftname": "google fit",
+      "name": "MMM-GoogleFit"
+    },
+    {
+      "URL": "https://github.com/pinsdorf/MMM-WeeklySchedule",
+      "identifier": "",
+      "mycroftname": "weekly schedule",
+      "name": "MMM-WeeklySchedule"
+    },
+    {
+      "identifier": "",
+      "mycroftname": "transport travel",
+      "name": "Transport / Travel"
+    },
+    {
+      "URL": "https://github.com/asimhsidd/MMM-GeoTracking",
+      "identifier": "",
+      "mycroftname": "geotracking",
+      "name": "MMM-GeoTracking"
+    },
+    {
+      "URL": "https://github.com/galaktor/MMM-DublinRTPI",
+      "identifier": "",
+      "mycroftname": "dublin r t p i",
+      "name": "MMM-DublinRTPI"
+    },
+    {
+      "URL": "https://github.com/archerydwd/DWD-RealtimeIrishRail",
+      "identifier": "",
+      "mycroftname": "realtime irish rail",
+      "name": "DWD-RealtimeIrishRail"
+    },
+    {
+      "URL": "https://github.com/73cirdan/MMM-bustimes",
+      "identifier": "",
+      "mycroftname": "bus times",
+      "name": "MMM-bustimes"
+    },
+    {
+      "URL": "https://github.com/NateDee/MMM-CTA",
+      "identifier": "",
+      "mycroftname": "c t a",
+      "name": "MMM-CTA"
+    },
+    {
+      "URL": "https://github.com/AdamMoses-GitHub/MMM-DCMetroTrainTimes",
+      "identifier": "",
+      "mycroftname": "d c metro train times",
+      "name": "MMM-DCMetroTrainTimes"
+    },
+    {
+      "URL": "https://github.com/skastenholz/MMM-DVB",
+      "identifier": "",
+      "mycroftname": "d v b",
+      "name": "MMM-DVB"
+    },
+    {
+      "URL": "https://github.com/Dom1n1c/MMM-EFA-departures",
+      "identifier": "",
+      "mycroftname": "e f a departures",
+      "name": "MMM-EFA-departures"
+    },
+    {
+      "URL": "https://github.com/E3V3A/MMM-FlightsAbove",
+      "identifier": "",
+      "mycroftname": "flights above",
+      "name": "MMM-FlightsAbove"
+    },
+    {
+      "URL": "https://github.com/fewieden/MMM-Fuel",
+      "identifier": "",
+      "mycroftname": "fuel",
+      "name": "MMM-Fuel"
+    },
+    {
+      "URL": "https://github.com/georg90/MMM-HH-LocalTransport",
+      "identifier": "",
+      "mycroftname": "h h local transport",
+      "name": "MMM-HH-LocalTransport"
+    },
+    {
+      "URL": "https://github.com/flick116/MMM-Hive",
+      "identifier": "",
+      "mycroftname": "hive",
+      "name": "MMM-Hive"
+    },
+    {
+      "URL": "https://github.com/winstonma/MMM-HK-KMB",
+      "identifier": "",
+      "mycroftname": "h k k m b",
+      "name": "MMM-HK-KMB"
+    },
+    {
+      "URL": "https://github.com/winstonma/MMM-HK-Transport",
+      "identifier": "",
+      "mycroftname": "h k transport",
+      "name": "MMM-HK-Transport"
+    },
+    {
+      "URL": "https://github.com/basti0001/MMM-iHaveBeenThere",
+      "identifier": "",
+      "mycroftname": "i have been there",
+      "name": "MMM-iHaveBeenThere"
+    },
+    {
+      "URL": "https://github.com/yo-less/MMM-KVV",
+      "identifier": "",
+      "mycroftname": "k v v",
+      "name": "MMM-KVV"
+    },
+    {
+      "URL": "https://github.com/CFenner/MMM-LocalTransport",
+      "identifier": "",
+      "mycroftname": "local transport",
+      "name": "MMM-LocalTransport"
+    },
+    {
+      "URL": "https://github.com/edward-shen/MMM-MBTA",
+      "identifier": "",
+      "mycroftname": "m b t a",
+      "name": "MMM-MBTA"
+    },
+    {
+      "URL": "https://github.com/tie624/MMM-MTA-NextBus",
+      "identifier": "",
+      "mycroftname": "m t a next bus",
+      "name": "MMM-MTA-NextBus"
+    },
+    {
+      "URL": "https://github.com/mrVragec/MMM-mvgmunich",
+      "identifier": "",
+      "mycroftname": "m v g munich",
+      "name": "MMM-mvgmunich"
+    },
+    {
+      "URL": "https://github.com/jclarke0000/MMM-MyCommute",
+      "identifier": "",
+      "mycroftname": "my commute",
+      "name": "MMM-MyCommute"
+    },
+    {
+      "URL": "https://github.com/jclarke0000/MMM-MyTTC",
+      "identifier": "",
+      "mycroftname": "my t t c",
+      "name": "MMM-MyTTC"
+    },
+    {
+      "URL": "https://github.com/ottopaulsen/MMM-NesteBussAtB",
+      "identifier": "",
+      "mycroftname": "neste buss at b",
+      "name": "MMM-NesteBussAtB"
+    },
+    {
+      "URL": "https://github.com/yo-less/MMM-nextbike",
+      "identifier": "",
+      "mycroftname": "next bike",
+      "name": "MMM-nextbike"
+    },
+    {
+      "URL": "https://github.com/qistoph/MMM-nstreinen",
+      "identifier": "",
+      "mycroftname": "nstreinen",
+      "name": "MMM-nstreinen"
+    },
+    {
+      "URL": "https://github.com/TobbenTM/MMM-OsloCityBike",
+      "identifier": "",
+      "mycroftname": "oslo city bike",
+      "name": "MMM-OsloCityBike"
+    },
+    {
+      "URL": "https://github.com/da4throux/MMM-Paris-RATP-PG",
+      "identifier": "",
+      "mycroftname": "paris r a t p p g",
+      "name": "MMM-Paris-RATP-PG"
+    },
+    {
+      "URL": "https://github.com/normyx/MMM-Nantes-TAN",
+      "identifier": "",
+      "mycroftname": "nantes t a n",
+      "name": "MMM-Nantes-TAN"
+    },
+    {
+      "URL": "https://github.com/ytmytm/MMM-pekavm",
+      "identifier": "",
+      "mycroftname": "pekavm",
+      "name": "MMM-pekavm"
+    },
+    {
+      "URL": "https://github.com/deg0nz/MMM-PublicTransportBerlin",
+      "identifier": "",
+      "mycroftname": "public transport berlin",
+      "name": "MMM-PublicTransportBerlin"
+    },
+    {
+      "URL": "https://github.com/raywo/MMM-PublicTransportLeipzig",
+      "identifier": "",
+      "mycroftname": "public transport leipzig",
+      "name": "MMM-PublicTransportLeipzig"
+    },
+    {
+      "URL": "https://github.com/raywo/MMM-PublicTransportHafas",
+      "identifier": "",
+      "mycroftname": "public transport hafas",
+      "name": "MMM-PublicTransportHafas"
+    },
+    {
+      "URL": "https://github.com/olexs/MMM-PublicTransportDB",
+      "identifier": "",
+      "mycroftname": "public transport d b",
+      "name": "MMM-PublicTransportDB"
+    },
+    {
+      "URL": "https://github.com/ChristianGeie/MMM-PublicTransportVVO",
+      "identifier": "",
+      "mycroftname": "public transport vv o",
+      "name": "MMM-PublicTransportVVO"
+    },
+    {
+      "URL": "https://github.com/Alvinger/MMM-ResRobot",
+      "identifier": "",
+      "mycroftname": "res robot",
+      "name": "MMM-ResRobot"
+    },
+    {
+      "URL": "https://github.com/yawnsde/MMM-RNV",
+      "identifier": "",
+      "mycroftname": "r n v",
+      "name": "MMM-RNV"
+    },
+    {
+      "URL": "https://github.com/CatoAntonsen/MMM-Ruter",
+      "identifier": "",
+      "mycroftname": "ruter",
+      "name": "MMM-Ruter"
+    },
+    {
+      "URL": "https://github.com/PabloDons/MMM-Skyss",
+      "identifier": "",
+      "mycroftname": "skyss",
+      "name": "MMM-Skyss"
+    },
+    {
+      "URL": "https://github.com/Arve/MMM-Entur-tavle",
+      "identifier": "",
+      "mycroftname": "entur tavle",
+      "name": "MMM-Entur-tavle"
+    },
+    {
+      "URL": "https://github.com/boghammar/MMM-SL-PublicTransport",
+      "identifier": "",
+      "mycroftname": "s l public transport",
+      "name": "MMM-SL-PublicTransport"
+    },
+    {
+      "URL": "https://github.com/0lek/MMM-socialbicycles",
+      "identifier": "",
+      "mycroftname": "social bicycles",
+      "name": "MMM-socialbicycles"
+    },
+    {
+      "URL": "https://github.com/danito/MMM-stib",
+      "identifier": "",
+      "mycroftname": "stib",
+      "name": "MMM-stib"
+    },
+    {
+      "URL": "https://github.com/vanhoekd/MMM-SwissStationboard",
+      "identifier": "",
+      "mycroftname": "swiss station board",
+      "name": "MMM-SwissStationboard"
+    },
+    {
+      "URL": "https://github.com/nixnuex/MMM-SwissCommute",
+      "identifier": "",
+      "mycroftname": "swiss commute",
+      "name": "MMM-SwissCommute"
+    },
+    {
+      "URL": "https://github.com/Bangee44/MMM-swisstransport",
+      "identifier": "",
+      "mycroftname": "swiss transport",
+      "name": "MMM-swisstransport"
+    },
+    {
+      "URL": "https://github.com/janhenrik/MMM-Tesla",
+      "identifier": "",
+      "mycroftname": "tesla",
+      "name": "MMM-Tesla"
+    },
+    {
+      "URL": "https://github.com/Bangee44/MMM-TrainConnections",
+      "identifier": "",
+      "mycroftname": "train connections",
+      "name": "MMM-TrainConnections"
+    },
+    {
+      "URL": "https://github.com/per-garden/MMM-Trains-Trafikverket",
+      "identifier": "",
+      "mycroftname": "trains trafikverket",
+      "name": "MMM-Trains-Trafikverket"
+    },
+    {
+      "URL": "https://github.com/nwootton/MMM-UKLiveBusStopInfo",
+      "identifier": "",
+      "mycroftname": "u k live bus stop info",
+      "name": "MMM-UKLiveBusStopInfo"
+    },
+    {
+      "URL": "https://github.com/nwootton/MMM-UKNationalRail",
+      "identifier": "",
+      "mycroftname": "u k national rail",
+      "name": "MMM-UKNationalRail"
+    },
+    {
+      "URL": "https://github.com/Klizzy/MMM-Vrr",
+      "identifier": "",
+      "mycroftname": "v r r",
+      "name": "MMM-Vrr"
+    },
+    {
+      "URL": "https://github.com/niklaskappler/MMM-vvsDeparture",
+      "identifier": "",
+      "mycroftname": "v v s departure",
+      "name": "MMM-vvsDeparture"
+    },
+    {
+      "URL": "https://github.com/neandertaler19/MMM-AC-aseag",
+      "identifier": "",
+      "mycroftname": "ac aseag",
+      "name": "MMM-AC-aseag"
+    },
+    {
+      "URL": "https://github.com/MarinescuEvghenii/MMM-Luxembourg-Public-Transport",
+      "identifier": "",
+      "mycroftname": "luxembourg public transport",
+      "name": "MMM-Luxembourg-Public-Transport"
+    },
+    {
+      "URL": "https://github.com/Com-Lum/MMM-RMV",
+      "identifier": "",
+      "mycroftname": "r m v",
+      "name": "MMM-RMV"
+    },
+    {
+      "URL": "https://github.com/SilverBirchh/MMM-TFL",
+      "identifier": "",
+      "mycroftname": "t f l",
+      "name": "MMM-TFL"
+    },
+    {
+      "URL": "https://github.com/kyle-kelly/MMM-uber",
+      "identifier": "",
+      "mycroftname": "uber",
+      "name": "MMM-uber"
+    },
+    {
+      "URL": "https://github.com/kyle-kelly/MMM-lyft",
+      "identifier": "",
+      "mycroftname": "lyft",
+      "name": "MMM-lyft"
+    },
+    {
+      "URL": "https://github.com/jirsis/emt",
+      "identifier": "",
+      "mycroftname": "e m t",
+      "name": "JIR-EMT"
+    },
+    {
+      "URL": "https://github.com/fewieden/MMM-WienerLinien",
+      "identifier": "",
+      "mycroftname": "wiener linien",
+      "name": "MMM-WienerLinien"
+    },
+    {
+      "URL": "https://github.com/jvanoost/MMM-SNCF",
+      "identifier": "",
+      "mycroftname": "s n c f",
+      "name": "MMM-SNCF"
+    },
+    {
+      "URL": "https://github.com/eouia/MMM-Assistant",
+      "identifier": "",
+      "mycroftname": "assistant",
+      "name": "MMM-Assistant"
+    },
+    {
+      "URL": "https://github.com/Matzefication/MMM-Hello-Mirror",
+      "identifier": "",
+      "mycroftname": "hello mirror",
+      "name": "MMM-Hello-Mirror"
+    },
+    {
+      "URL": "https://github.com/joanaz/MMM-MirrorMirrorOnTheWall",
+      "identifier": "",
+      "mycroftname": "mirror mirror on the wall",
+      "name": "MMM-MirrorMirrorOnTheWall"
+    },
+    {
+      "URL": "https://github.com/fewieden/MMM-TTS",
+      "identifier": "",
+      "mycroftname": "t t s",
+      "name": "MMM-TTS"
+    },
+    {
+      "URL": "https://github.com/dr4ke616/MMM-Voice-Control",
+      "identifier": "",
+      "mycroftname": "voice control",
+      "name": "MMM-Voice-Control"
+    },
+    {
+      "URL": "https://github.com/fewieden/MMM-voice",
+      "identifier": "",
+      "mycroftname": "voice",
+      "name": "MMM-voice"
+    },
+    {
+      "URL": "https://github.com/whyjustin/magic-mirror-voice",
+      "identifier": "",
+      "mycroftname": "magic mirror voice",
+      "name": "magic-mirror-voice"
+    },
+    {
+      "URL": "https://github.com/alexyak/voicecontrol",
+      "identifier": "",
+      "mycroftname": "voice control",
+      "name": "voicecontrol"
+    },
+    {
+      "URL": "https://github.com/kalliope-project/MMM-kalliope",
+      "identifier": "",
+      "mycroftname": "kalliope",
+      "name": "MMM-kalliope"
+    },
+    {
+      "URL": "https://github.com/MichMich/MagicMirror/tree/master/modules/default/currentweather",
+      "identifier": "",
+      "mycroftname": "current weather",
+      "name": "Weather"
+    },
+    {
+      "URL": "https://github.com/CFenner/MMM-AirQuality",
+      "identifier": "",
+      "mycroftname": "air quality",
+      "name": "MMM-AirQuality"
+    },
+    {
+      "URL": "https://github.com/stuloh/MMM-aviationwx",
+      "identifier": "",
+      "mycroftname": "aviation w x",
+      "name": "MMM-aviationwx"
+    },
+    {
+      "URL": "https://github.com/nebulx29/MMM-bergfex",
+      "identifier": "",
+      "mycroftname": "bergfex at",
+      "name": "MMM-bergfex.at"
+    },
+    {
+      "URL": "https://github.com/Bangee44/MMM-DHT22",
+      "identifier": "",
+      "mycroftname": "d h t 2 2",
+      "name": "MMM-DHT22"
+    },
+    {
+      "URL": "https://github.com/MichaelF1/MMM-HDC1080",
+      "identifier": "",
+      "mycroftname": "h d c 10 80",
+      "name": "MMM-HDC1080"
+    },
+    {
+      "URL": "https://github.com/nebulx29/MMM-dht22",
+      "identifier": "",
+      "mycroftname": "d h t 22",
+      "name": "MMM-dht22"
+    },
+    {
+      "URL": "https://github.com/bernardpletikosa/MMM-DHT-Sensor",
+      "identifier": "",
+      "mycroftname": "d h t",
+      "name": "MMM-DHT"
+    },
+    {
+      "URL": "https://github.com/LukeSkywalker92/MMM-DWD-WarnWeather",
+      "identifier": "",
+      "mycroftname": "d w d warn weather",
+      "name": "MMM-DWD-WarnWeather"
+    },
+    {
+      "URL": "https://github.com/nigel-daniels/MMM-FAA-Delay",
+      "identifier": "",
+      "mycroftname": "f a a delay",
+      "name": "MMM-FAA-Delay"
+    },
+    {
+      "URL": "https://github.com/BenRoe/MMM-FHEM",
+      "identifier": "",
+      "mycroftname": "f h e m",
+      "name": "MMM-FHEM"
+    },
+    {
+      "URL": "https://github.com/idoodler/MMM-forecast-io",
+      "identifier": "",
+      "mycroftname": "forecast i o",
+      "name": "MMM-forecast-io"
+    },
+    {
+      "URL": "https://github.com/raywo/MMM-GameOfLife",
+      "identifier": "",
+      "mycroftname": "game of life",
+      "name": "MMM-GameOfLife"
+    },
+    {
+      "URL": "https://github.com/mochman/MMM-GPSWeather",
+      "identifier": "",
+      "mycroftname": "g p s weather",
+      "name": "MMM-GPSWeather"
+    },
+    {
+      "URL": "https://github.com/sebastianhodapp/MMM-IndoorTemp",
+      "identifier": "",
+      "mycroftname": "indoor temp",
+      "name": "MMM-IndoorTemp"
+    },
+    {
+      "URL": "https://github.com/Bangee44/MMM-meteoblueCurrent",
+      "identifier": "",
+      "mycroftname": "meteo blue current",
+      "name": "MMM-meteoblueCurrent"
+    },
+    {
+      "URL": "https://github.com/jclarke0000/MMM-MyWeather",
+      "identifier": "",
+      "mycroftname": "my weather",
+      "name": "MMM-MyWeather"
+    },
+    {
+      "URL": "https://github.com/CFenner/MMM-Netatmo",
+      "identifier": "",
+      "mycroftname": "net at mo",
+      "name": "MMM-Netatmo"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-PilotWX",
+      "identifier": "",
+      "mycroftname": "pilot w x",
+      "name": "MMM-PilotWX"
+    },
+    {
+      "URL": "https://github.com/devduisburg/MMM-pollen",
+      "identifier": "",
+      "mycroftname": "pollen",
+      "name": "MMM-pollen"
+    },
+    {
+      "URL": "https://github.com/73cirdan/MMM-rainfc",
+      "identifier": "",
+      "mycroftname": "rain f c",
+      "name": "MMM-RainFc"
+    },
+    {
+      "URL": "https://github.com/spoturdeal/MMM-rain-forecast",
+      "identifier": "",
+      "mycroftname": "rain forecast",
+      "name": "MMM-rain-forecast"
+    },
+    {
+      "URL": "https://github.com/tttooommm56/MMM-RainForecast-FR",
+      "identifier": "",
+      "mycroftname": "rain forecast f r",
+      "name": "MMM-RainForecast-FR"
+    },
+    {
+      "URL": "https://github.com/Santanachia/MMM-SmokedMirror",
+      "identifier": "",
+      "mycroftname": "smoked mirror",
+      "name": "MMM-SmokedMirror"
+    },
+    {
+      "URL": "https://github.com/mstarzec386/MMM-Airly",
+      "identifier": "",
+      "mycroftname": "airly",
+      "name": "MMM-Airly"
+    },
+    {
+      "URL": "https://github.com/erikmohn/MMM-Vindsiden",
+      "identifier": "",
+      "mycroftname": "vindsiden",
+      "name": "MMM-Vindsiden"
+    },
+    {
+      "URL": "https://github.com/paphko/mmm-weatherchart",
+      "identifier": "",
+      "mycroftname": "weather chart",
+      "name": "MMM-weatherchart"
+    },
+    {
+      "URL": "https://github.com/yawnsde/MMM-WorldTides",
+      "identifier": "",
+      "mycroftname": "world tides",
+      "name": "MMM-WorldTides"
+    },
+    {
+      "URL": "https://github.com/Yr/MMM-YrNow",
+      "identifier": "",
+      "mycroftname": "year now",
+      "name": "MMM-YrNow"
+    },
+    {
+      "URL": "https://github.com/fmandal/MMM-YrThen",
+      "identifier": "",
+      "mycroftname": "year then",
+      "name": "MMM-YrThen"
+    },
+    {
+      "URL": "https://github.com/MattLugar/wuforecast",
+      "identifier": "",
+      "mycroftname": "w u forecast",
+      "name": "wuforecast"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-WWI",
+      "identifier": "",
+      "mycroftname": "w w i",
+      "name": "MMM-WWI"
+    },
+    {
+      "URL": "https://github.com/marska/MMM-Looko2-aq",
+      "identifier": "",
+      "mycroftname": "look o 2 a q",
+      "name": "MMM-Looko2-aq"
+    },
+    {
+      "URL": "https://github.com/leinich/MMM-homeassistant-sensors",
+      "identifier": "",
+      "mycroftname": "home assistant sensors",
+      "name": "MMM-homeassistant-sensors"
+    },
+    {
+      "URL": "https://github.com/KirAsh4/calendar_monthly/",
+      "identifier": "",
+      "mycroftname": "calendar monthly",
+      "name": "calendar_monthly"
+    },
+    {
+      "URL": "https://github.com/alexyak/camera",
+      "identifier": "",
+      "mycroftname": "camera",
+      "name": "camera"
+    },
+    {
+      "URL": "https://github.com/ronny3050/email-mirror",
+      "identifier": "",
+      "mycroftname": "email mirror",
+      "name": "email-mirror"
+    },
+    {
+      "URL": "https://github.com/desertblade/iFrame",
+      "identifier": "",
+      "mycroftname": "i frame",
+      "name": "iFrame"
+    },
+    {
+      "URL": "https://github.com/ronny3050/internet-monitor",
+      "identifier": "",
+      "mycroftname": "internet monitor",
+      "name": "internet-monitor"
+    },
+    {
+      "URL": "https://github.com/maliciousbanjo/PushBulletNotes",
+      "identifier": "",
+      "mycroftname": "push bullet notes",
+      "name": "PushBulletNotes"
+    },
+    {
+      "URL": "https://github.com/Jopyth/MMM-Advent",
+      "identifier": "",
+      "mycroftname": "advent",
+      "name": "MMM-Advent"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-AfterShip",
+      "identifier": "",
+      "mycroftname": "after ship",
+      "name": "MMM-AfterShip"
+    },
+    {
+      "URL": "https://github.com/sakirtemel/MMM-alexa",
+      "identifier": "",
+      "mycroftname": "alexa",
+      "name": "MMM-Alexa"
+    },
+    {
+      "URL": "https://github.com/dolanmiu/MMM-awesome-alexa",
+      "identifier": "",
+      "mycroftname": "awesome alexa",
+      "name": "MMM-awesome-alexa"
+    },
+    {
+      "URL": "https://github.com/spoturdeal/MMM-Bose-Soundtouch",
+      "identifier": "",
+      "mycroftname": "bose sound touch",
+      "name": "MMM-Bose-Soundtouch"
+    },
+    {
+      "URL": "https://github.com/eouia/MMM-CalendarExt",
+      "identifier": "",
+      "mycroftname": "calendar e x t",
+      "name": "MMM-CalendarExt"
+    },
+    {
+      "URL": "https://github.com/paviro/MMM-Callmonitor-Current-Call",
+      "identifier": "",
+      "mycroftname": "call monitor current call",
+      "name": "MMM-Callmonitor-Current-Call"
+    },
+    {
+      "URL": "https://github.com/flo80/MMM-chromecast",
+      "identifier": "",
+      "mycroftname": "chromecast",
+      "name": "MMM-chromecast"
+    },
+    {
+      "URL": "https://github.com/boazarad/MMM-CountDown",
+      "identifier": "",
+      "mycroftname": "count down",
+      "name": "MMM-CountDown"
+    },
+    {
+      "URL": "https://github.com/mboskamp/MMM-Discogs",
+      "identifier": "",
+      "mycroftname": "discogs",
+      "name": "MMM-Discogs"
+    },
+    {
+      "URL": "https://github.com/spoturdeal/MMM-Domoticz",
+      "identifier": "",
+      "mycroftname": "domoticz",
+      "name": "MMM-Domoticz"
+    },
+    {
+      "URL": "https://github.com/nitpum/MMM-EmbedYoutube",
+      "identifier": "",
+      "mycroftname": "embed youtube",
+      "name": "MMM-EmbedYoutube"
+    },
+    {
+      "URL": "https://github.com/eouia/MMM-fbPageCounter",
+      "identifier": "",
+      "mycroftname": "facebook page counter",
+      "name": "MMM-fbPageCounter"
+    },
+    {
+      "URL": "https://github.com/SpoturDeal/MMM-Fibaro",
+      "identifier": "",
+      "mycroftname": "fibaro",
+      "name": "MMM-Fibaro"
+    },
+    {
+      "URL": "https://github.com/SVendittelli/MMM-fitbit",
+      "identifier": "",
+      "mycroftname": "fit bit",
+      "name": "MMM-fitbit"
+    },
+    {
+      "URL": "https://github.com/tataille/MMM-FreeBox-Monitor",
+      "identifier": "",
+      "mycroftname": "free box monitor",
+      "name": "MMM-FreeBox-Monitor"
+    },
+    {
+      "URL": "https://github.com/paviro/MMM-FRITZ-Box-Callmonitor",
+      "identifier": "",
+      "mycroftname": "fritz box call monitor",
+      "name": "MMM-FRITZ-Box-Callmonitor"
+    },
+    {
+      "URL": "https://github.com/da4throux/MMM-GCP",
+      "identifier": "",
+      "mycroftname": "g c p",
+      "name": "MMM-GCP"
+    },
+    {
+      "URL": "https://github.com/gauravsacc/MMM-GoogleAssistant",
+      "identifier": "",
+      "mycroftname": "google assistant",
+      "name": "MMM-GoogleAssistant"
+    },
+    {
+      "URL": "https://github.com/sp4ceman/MMM-googlemaps",
+      "identifier": "",
+      "mycroftname": "google maps",
+      "name": "MMM-googlemaps"
+    },
+    {
+      "URL": "https://github.com/dancj/MMM-Hover",
+      "identifier": "",
+      "mycroftname": "hover",
+      "name": "MMM-Hover"
+    },
+    {
+      "URL": "https://github.com/Eunanibus/MMM-HTTPRequestDisplay",
+      "identifier": "",
+      "mycroftname": "h t t p request display",
+      "name": "MMM-HTTPRequestDisplay"
+    },
+    {
+      "URL": "https://github.com/MitchSS/MMM-Hue",
+      "identifier": "",
+      "mycroftname": "hue",
+      "name": "MMM-Hue"
+    },
+    {
+      "URL": "https://github.com/bitte-ein-bit/MMM-iCloud-Client",
+      "identifier": "",
+      "mycroftname": " i cloud client",
+      "name": "MMM-iCloud-Client"
+    },
+    {
+      "URL": "https://github.com/ioBroker/MMM-ioBroker",
+      "identifier": "",
+      "mycroftname": "i o broker",
+      "name": "MMM-ioBroker"
+    },
+    {
+      "URL": "https://github.com/RedNax67/MMM-IPCam",
+      "identifier": "",
+      "mycroftname": "i p cam",
+      "name": "MMM-IPCam"
+    },
+    {
+      "URL": "https://github.com/fewieden/MMM-ip",
+      "identifier": "",
+      "mycroftname": "i p",
+      "name": "MMM-ip"
+    },
+    {
+      "URL": "https://github.com/shbatm/MMM-ISY",
+      "identifier": "",
+      "mycroftname": "i s y",
+      "name": "MMM-ISY"
+    },
+    {
+      "URL": "https://github.com/prysme01/MMM-Jeedom",
+      "identifier": "",
+      "mycroftname": "jeedom",
+      "name": "MMM-Jeedom"
+    },
+    {
+      "URL": "https://github.com/amcolash/MMM-json-feed",
+      "identifier": "",
+      "mycroftname": "json feed",
+      "name": "MMM-json-feed"
+    },
+    {
+      "URL": "https://github.com/shbatm/MMM-JSONStatusChecker",
+      "identifier": "",
+      "mycroftname": "json status checker",
+      "name": "MMM-JSONStatusChecker"
+    },
+    {
+      "URL": "https://github.com/timdows/MMM-JsonTable",
+      "identifier": "",
+      "mycroftname": "json table",
+      "name": "MMM-JsonTable"
+    },
+    {
+      "URL": "https://github.com/shbatm/MMM-KeyBindings",
+      "identifier": "",
+      "mycroftname": "key bindings",
+      "name": "MMM-KeyBindings"
+    },
+    {
+      "URL": "https://github.com/Txukie/MMM-LCDControl",
+      "identifier": "",
+      "mycroftname": "l c d control",
+      "name": "MMM-LCDControl"
+    },
+    {
+      "URL": "https://github.com/mirko3000/MMM-max",
+      "identifier": "",
+      "mycroftname": "max",
+      "name": "MMM-max"
+    },
+    {
+      "URL": "https://github.com/schnibel/MMM-Memo",
+      "identifier": "",
+      "mycroftname": "memo",
+      "name": "MMM-Memo"
+    },
+    {
+      "URL": "https://github.com/PatriceG/MMM-MPR121",
+      "identifier": "",
+      "mycroftname": "m p r 1 2 1",
+      "name": "MMM-MPR121"
+    },
+    {
+      "URL": "https://github.com/ottopaulsen/MMM-MQTT",
+      "identifier": "",
+      "mycroftname": "m q t t",
+      "name": "MMM-MQTT"
+    },
+    {
+      "URL": "https://github.com/jclarke0000/MMM-MyCalendar",
+      "identifier": "",
+      "mycroftname": "my calendar",
+      "name": "MMM-MyCalendar"
+    },
+    {
+      "URL": "https://github.com/jclarke0000/MMM-MyWastePickup",
+      "identifier": "",
+      "mycroftname": "my waste pickup",
+      "name": "MMM-MyWastePickup"
+    },
+    {
+      "URL": "https://github.com/qistoph/MMM-nagios",
+      "identifier": "",
+      "mycroftname": "nagios",
+      "name": "MMM-nagios"
+    },
+    {
+      "URL": "https://github.com/mochman/MMM-Nest",
+      "identifier": "",
+      "mycroftname": "nest",
+      "name": "MMM-Nest"
+    },
+    {
+      "URL": "https://github.com/ianperrin/MMM-NetworkScanner",
+      "identifier": "",
+      "mycroftname": "network scanner",
+      "name": "MMM-NetworkScanner"
+    },
+    {
+      "URL": "https://github.com/joanaz/MMM-NoteTaker",
+      "identifier": "",
+      "mycroftname": "note taker",
+      "name": "MMM-NoteTaker"
+    },
+    {
+      "URL": "https://github.com/shbatm/octomirror-module/",
+      "identifier": "",
+      "mycroftname": "octo print module",
+      "name": "octoprint-module"
+    },
+    {
+      "URL": "https://github.com/paphko/mmm-openhabfloorplan",
+      "identifier": "",
+      "mycroftname": "open hab floor plan",
+      "name": "MMM-openhabfloorplan"
+    },
+    {
+      "URL": "https://github.com/marcelwinh/MMM-PimaticFloorplan",
+      "identifier": "",
+      "mycroftname": "pimatic floor plan",
+      "name": "MMM-PimaticFloorplan"
+    },
+    {
+      "URL": "https://github.com/RedNax67/MMM-OpenTherm",
+      "identifier": "",
+      "mycroftname": "open therm",
+      "name": "MMM-OpenTherm"
+    },
+    {
+      "URL": "https://github.com/edward-shen/MMM-pages",
+      "identifier": "",
+      "mycroftname": "pages",
+      "name": "MMM-pages"
+    },
+    {
+      "URL": "https://github.com/martinkooij/MMM-Parcel",
+      "identifier": "",
+      "mycroftname": "parcel",
+      "name": "MMM-Parcel"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-PC-Stats",
+      "identifier": "",
+      "mycroftname": "p c stats",
+      "name": "MMM-PC-Stats"
+    },
+    {
+      "URL": "https://github.com/sheyabernstein/MMM-pihole-stats",
+      "identifier": "",
+      "mycroftname": "pi hole stats",
+      "name": "MMM-pihole-stats"
+    },
+    {
+      "URL": "https://github.com/CFenner/MagicMirror-Ping-Module",
+      "identifier": "",
+      "mycroftname": "ping",
+      "name": "MMM-Ping"
+    },
+    {
+      "URL": "https://github.com/paviro/MMM-PIR-Sensor",
+      "identifier": "",
+      "mycroftname": "p i r sensor",
+      "name": "MMM-PIR-Sensor"
+    },
+    {
+      "URL": "https://github.com/mboskamp/MMM-PIR",
+      "identifier": "",
+      "mycroftname": "p i r",
+      "name": "MMM-PIR"
+    },
+    {
+      "URL": "https://github.com/Wanztwurst/MMM-portscan",
+      "identifier": "",
+      "mycroftname": "port scan",
+      "name": "MMM-portscan"
+    },
+    {
+      "URL": "https://github.com/stewartmckee/MMM-Property-managed",
+      "identifier": "",
+      "mycroftname": "property managed",
+      "name": "MMM-Property-Managed"
+    },
+    {
+      "URL": "https://github.com/Tuxdiver/MMM-Rest",
+      "identifier": "",
+      "mycroftname": "rest",
+      "name": "MMM-Rest"
+    },
+    {
+      "URL": "https://github.com/relm923/MMM-Roomba980",
+      "identifier": "",
+      "mycroftname": "roomba 9 8 0",
+      "name": "MMM-Roomba980"
+    },
+    {
+      "URL": "https://github.com/Taolanoz/MMM-RSS-FEED",
+      "identifier": "",
+      "mycroftname": "r s s feed",
+      "name": "MMM-RSS-FEED"
+    },
+    {
+      "URL": "https://github.com/shbatm/MMM-RTSPStream",
+      "identifier": "",
+      "mycroftname": "r t s p stream",
+      "name": "MMM-RTSPStream"
+    },
+    {
+      "URL": "https://github.com/Txukie/MMM-Selfie",
+      "identifier": "",
+      "mycroftname": "selfie",
+      "name": "MMM-Selfie"
+    },
+    {
+      "URL": "https://github.com/surekap/MMM-ShairportMetadata",
+      "identifier": "",
+      "mycroftname": "share port meta data",
+      "name": "MMM-ShairportMetadata"
+    },
+    {
+      "URL": "https://github.com/fewieden/MMM-ShipmentTracking",
+      "identifier": "",
+      "mycroftname": "shipment tracking",
+      "name": "MMM-ShipmentTracking"
+    },
+    {
+      "URL": "https://github.com/frdteknikelektro/MMM-SimpleLogo",
+      "identifier": "",
+      "mycroftname": "simple logo",
+      "name": "MMM-SimpleLogo"
+    },
+    {
+      "URL": "https://github.com/retroflex/MMM-Skolmaten",
+      "identifier": "",
+      "mycroftname": "skolmaten",
+      "name": "MMM-Skolmaten"
+    },
+    {
+      "URL": "https://github.com/tkrywit/MMM-Solar",
+      "identifier": "",
+      "mycroftname": "solar",
+      "name": "MMM-Solar"
+    },
+    {
+      "URL": "https://github.com/CFenner/MMM-Sonos",
+      "identifier": "",
+      "mycroftname": "sonos",
+      "name": "MMM-Sonos"
+    },
+    {
+      "URL": "https://github.com/SkogDev/MMM-StorH",
+      "identifier": "",
+      "mycroftname": "stor h",
+      "name": "MMM-StorH"
+    },
+    {
+      "URL": "https://github.com/ianperrin/MMM-Strava",
+      "identifier": "",
+      "mycroftname": "strava",
+      "name": "MMM-Strava"
+    },
+    {
+      "URL": "https://github.com/mochman/MMM-Swipe",
+      "identifier": "",
+      "mycroftname": "swipe",
+      "name": "MMM-Swipe"
+    },
+    {
+      "URL": "https://github.com/Thlb/MMM-synology-ds",
+      "identifier": "",
+      "mycroftname": "synology d s",
+      "name": "MMM-synology-ds"
+    },
+    {
+      "URL": "https://github.com/paviro/MMM-syslog",
+      "identifier": "",
+      "mycroftname": "syslog",
+      "name": "MMM-syslog"
+    },
+    {
+      "URL": "https://github.com/BenRoe/MMM-SystemStats",
+      "identifier": "",
+      "mycroftname": "system stats",
+      "name": "MMM-SystemStats"
+    },
+    {
+      "URL": "https://github.com/MichMich/mmm-systemtemperature",
+      "identifier": "",
+      "mycroftname": "system temperature",
+      "name": "MMM-SystemTemperature"
+    },
+    {
+      "URL": "https://github.com/eouia/MMM-TelegramBot",
+      "identifier": "",
+      "mycroftname": "telegram bot",
+      "name": "MMM-TelegramBot"
+    },
+    {
+      "URL": "https://github.com/Thlb/MMM-temp-ds18b20",
+      "identifier": "",
+      "mycroftname": "temp d s 18 b 20",
+      "name": "MMM-temp-ds18b20"
+    },
+    {
+      "URL": "https://github.com/ryck/MMM-TFL-Arrivals",
+      "identifier": "",
+      "mycroftname": "t f l arrivals",
+      "name": "MMM-TFL-Arrivals"
+    },
+    {
+      "URL": "https://github.com/cbrooker/MMM-Todoist",
+      "identifier": "",
+      "mycroftname": "to do list",
+      "name": "MMM-Todoist"
+    },
+    {
+      "URL": "https://github.com/eouia/MMM-Tools",
+      "identifier": "",
+      "mycroftname": "tools",
+      "name": "MMM-Tools"
+    },
+    {
+      "URL": "https://github.com/MichMich/MMM-Toon",
+      "identifier": "",
+      "mycroftname": "toon",
+      "name": "MMM-Toon"
+    },
+    {
+      "URL": "https://github.com/Jopyth/MMM-Trello",
+      "identifier": "",
+      "mycroftname": "trello",
+      "name": "MMM-Trello"
+    },
+    {
+      "URL": "https://github.com/msteinkogler/MMM-updateFromStdOut",
+      "identifier": "",
+      "mycroftname": "update from std out",
+      "name": "MMM-updateFromStdOut"
+    },
+    {
+      "URL": "https://github.com/mrVragec/MMM-uptimerobot",
+      "identifier": "",
+      "mycroftname": "up time robot",
+      "name": "MMM-uptimerobot"
+    },
+    {
+      "URL": "https://github.com/MichMich/MMM-WatchDog",
+      "identifier": "",
+      "mycroftname": "watch dog",
+      "name": "MMM-WatchDog"
+    },
+    {
+      "URL": "https://github.com/SVendittelli/MMM-wordnik",
+      "identifier": "",
+      "mycroftname": "wordnik",
+      "name": "MMM-wordnik"
+    },
+    {
+      "URL": "https://github.com/funsocietyirc/MMM-Wunderlist-Enhanced",
+      "identifier": "",
+      "mycroftname": "wunderlist enhanced",
+      "name": "MMM-Wunderlist-Enhanced"
+    },
+    {
+      "URL": "https://github.com/paviro/MMM-Wunderlist",
+      "identifier": "",
+      "mycroftname": "wunderlist",
+      "name": "MMM-Wunderlist"
+    },
+    {
+      "URL": "https://github.com/QNimbus/MMM-YouLess",
+      "identifier": "",
+      "mycroftname": "you less",
+      "name": "MMM-YouLess"
+    },
+    {
+      "URL": "https://github.com/alexyak/motiondetector",
+      "identifier": "",
+      "mycroftname": "motion detector",
+      "name": "motiondetector"
+    },
+    {
+      "URL": "https://github.com/ronny3050/phone-notification-mirror",
+      "identifier": "",
+      "mycroftname": "e notification mirror",
+      "name": "phone-notification-mirror"
+    },
+    {
+      "URL": "https://github.com/MarinescuEvghenii/MMM-Cursor",
+      "identifier": "",
+      "mycroftname": "cursor",
+      "name": "MMM-Cursor"
+    },
+    {
+      "URL": "https://github.com/MarinescuEvghenii/MMM-QRCode",
+      "identifier": "",
+      "mycroftname": "q r code",
+      "name": "MMM-QRCode"
+    },
+    {
+      "URL": "https://github.com/MarinescuEvghenii/MMM-Chart",
+      "identifier": "",
+      "mycroftname": "chart",
+      "name": "MMM-Chart"
+    },
+    {
+      "URL": "https://github.com/mirko3000/MMM-xiaomi",
+      "identifier": "",
+      "mycroftname": "xiaomi",
+      "name": "MMM-xiaomi"
+    },
+    {
+      "URL": "https://github.com/overflOw11/MMM-Netatmo-Thermostat",
+      "identifier": "",
+      "mycroftname": "net at mo thermostat",
+      "name": "MMM-Netatmo-Thermostat"
+    },
+    {
+      "URL": "https://github.com/RpDp-git/PiDisplaySleep.git",
+      "identifier": "",
+      "mycroftname": "presence monitor wifi",
+      "name": "PresenceMonitor-WiFi"
+    },
+    {
+      "URL": "https://github.com/CFenner/MMM-Smappee",
+      "identifier": "",
+      "mycroftname": "smappee",
+      "name": "MMM-Smappee"
+    },
+    {
+      "URL": "https://github.com/juzim/MMM-Api",
+      "identifier": "",
+      "mycroftname": "a p i",
+      "name": "MMM-API"
+    },
+    {
+      "URL": "https://github.com/parnic/MMM-ScreenLogic",
+      "identifier": "",
+      "mycroftname": "screen logic",
+      "name": "MMM-ScreenLogic"
+    },
+    {
+      "URL": "https://github.com/mboskamp/MMM-Pull",
+      "identifier": "",
+      "mycroftname": "pull",
+      "name": "MMM-Pull"
+    },
+    {
+      "URL": "https://github.com/idoodler/MMM-Loxone",
+      "identifier": "",
+      "mycroftname": "loxone",
+      "name": "MMM-Loxone"
+    },
+    {
+      "identifier": "",
+      "mycroftname": "entertainment miscellaneous",
+      "name": "Entertainment / Misc"
+    },
+    {
+      "URL": "https://github.com/Blastitt/DailyXKCD",
+      "identifier": "",
+      "mycroftname": "daily x k c d",
+      "name": "DailyXKCD"
+    },
+    {
+      "URL": "https://github.com/andrecarlucci/MMM-DailyDilbert",
+      "identifier": "",
+      "mycroftname": "daily dilbert",
+      "name": "MMM-DailyDilbert"
+    },
+    {
+      "URL": "https://github.com/masters1222/mm-music-player",
+      "identifier": "",
+      "mycroftname": "music player",
+      "name": "mm-music-player"
+    },
+    {
+      "URL": "https://github.com/cowboysdude/MMM-Astrology",
+      "identifier": "",
+      "mycroftname": "astrology",
+      "name": "MMM-Astrology"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-Astronauts",
+      "identifier": "",
+      "mycroftname": "astronauts",
+      "name": "MMM-Astronauts"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-ATM",
+      "identifier": "",
+      "mycroftname": "a t m",
+      "name": "MMM-ATM"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-CARDS",
+      "identifier": "",
+      "mycroftname": "cards",
+      "name": "MMM-CARDS"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-Census",
+      "identifier": "",
+      "mycroftname": "census",
+      "name": "MMM-Census"
+    },
+    {
+      "URL": "https://github.com/ianperrin/MMM-Clash-Royale",
+      "identifier": "",
+      "mycroftname": "clash royale",
+      "name": "MMM-Clash-Royale"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-Cocktails",
+      "identifier": "",
+      "mycroftname": "cocktails",
+      "name": "MMM-Cocktails"
+    },
+    {
+      "URL": "https://github.com/marcobiedermann/MMM-dribbble",
+      "identifier": "",
+      "mycroftname": "dribbble",
+      "name": "MMM-Dribbble"
+    },
+    {
+      "URL": "https://github.com/eouia/MMM-DropboxWallpaper",
+      "identifier": "",
+      "mycroftname": "dropbox wallpaper",
+      "name": "MMM-DropboxWallpaper"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-EARTH",
+      "identifier": "",
+      "mycroftname": "earth",
+      "name": "MMM-EARTH"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-Earthquake",
+      "identifier": "",
+      "mycroftname": "earthquake",
+      "name": "MMM-Earthquake"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-EasyPix",
+      "identifier": "",
+      "mycroftname": "easy pix",
+      "name": "MMM-EasyPix"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-EOL",
+      "identifier": "",
+      "mycroftname": "e o l",
+      "name": "MMM-EOL"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-EventHorizon",
+      "identifier": "",
+      "mycroftname": "event horizon",
+      "name": "MMM-EventHorizon"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-Events",
+      "identifier": "",
+      "mycroftname": "events",
+      "name": "MMM-Events"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-EyeCandy",
+      "identifier": "",
+      "mycroftname": "eye candy",
+      "name": "MMM-EyeCandy"
+    },
+    {
+      "URL": "https://github.com/paviro/MMM-Facial-Recognition",
+      "identifier": "",
+      "mycroftname": "facial recognition",
+      "name": "MMM-Facial-Recognition"
+    },
+    {
+      "URL": "https://github.com/normyx/MMM-Facial-Recognition-OCV3",
+      "identifier": "",
+      "mycroftname": "facial recognition o c v 3",
+      "name": "MMM-Facial-Recognition-OCV3"
+    },
+    {
+      "URL": "http://bit.ly/MMM-Flickr",
+      "identifier": "",
+      "mycroftname": "flicker",
+      "name": "MMM-Flickr"
+    },
+    {
+      "URL": "https://github.com/ianperrin/MMM-Formula1",
+      "identifier": "",
+      "mycroftname": "formula 1",
+      "name": "MMM-Formula1"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-FMI",
+      "identifier": "",
+      "mycroftname": "f m i",
+      "name": "MMM-FMI"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-Fortune",
+      "identifier": "",
+      "mycroftname": "fortune",
+      "name": "MMM-Fortune"
+    },
+    {
+      "URL": "https://github.com/LukeSkywalker92/MMM-Globe",
+      "identifier": "",
+      "mycroftname": "globe",
+      "name": "MMM-Globe"
+    },
+    {
+      "URL": "https://github.com/aleckeller/MMM-HappyHours",
+      "identifier": "",
+      "mycroftname": "happy hours",
+      "name": "MMM-HappyHours"
+    },
+    {
+      "URL": "https://github.com/mykle1/Hello-Lucy",
+      "identifier": "",
+      "mycroftname": "hello lucy",
+      "name": "Hello-Lucy"
+    },
+    {
+      "URL": "https://github.com/cowboysdude/MMM-History",
+      "identifier": "",
+      "mycroftname": "history",
+      "name": "MMM-History"
+    },
+    {
+      "URL": "https://github.com/morozgrafix/MMM-horoscope",
+      "identifier": "",
+      "mycroftname": "horoscope",
+      "name": "MMM-horoscope"
+    },
+    {
+      "URL": "https://github.com/AdamMoses-GitHub/MMM-ImageSlideshow",
+      "identifier": "",
+      "mycroftname": "image slide show",
+      "name": "MMM-ImageSlideshow"
+    },
+    {
+      "URL": "http://bit.ly/MMM-Instagram",
+      "identifier": "",
+      "mycroftname": "instagram",
+      "name": "MMM-Instagram"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-ISS",
+      "identifier": "",
+      "mycroftname": "i s s",
+      "name": "MMM-ISS"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-JEOPARDY",
+      "identifier": "",
+      "mycroftname": "jeopardy",
+      "name": "MMM-JEOPARDY"
+    },
+    {
+      "URL": "https://github.com/pvyParts/MMM-jokes",
+      "identifier": "",
+      "mycroftname": "jokes",
+      "name": "MMM-jokes"
+    },
+    {
+      "URL": "https://github.com/thomo/MMM-kudos",
+      "identifier": "",
+      "mycroftname": "kudos",
+      "name": "MMM-kudos"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-Launch",
+      "identifier": "",
+      "mycroftname": "launch",
+      "name": "MMM-Launch"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-Lottery",
+      "identifier": "",
+      "mycroftname": "lottery",
+      "name": "MMM-Lottery"
+    },
+    {
+      "URL": "https://github.com/TheVieiraAkA/MMM-MyTraktSeries",
+      "identifier": "",
+      "mycroftname": "my trakt series",
+      "name": "MMM-MyTraktSeries"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-Lunartic",
+      "identifier": "",
+      "mycroftname": "lunartic",
+      "name": "MMM-Lunartic"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-MARS",
+      "identifier": "",
+      "mycroftname": "mars",
+      "name": "MMM-MARS"
+    },
+    {
+      "URL": "https://github.com/spectroman/mmm-moon-phases",
+      "identifier": "",
+      "mycroftname": "moon phases",
+      "name": "MMM-moon-phases"
+    },
+    {
+      "URL": "https://github.com/fewieden/MMM-MovieInfo",
+      "identifier": "",
+      "mycroftname": "movie info",
+      "name": "MMM-MovieInfo"
+    },
+    {
+      "URL": "https://github.com/Tueti/MMM-MovieListings",
+      "identifier": "",
+      "mycroftname": "movie listings",
+      "name": "MMM-MovieListings"
+    },
+    {
+      "URL": "https://github.com/timjong93/MMM-MPD",
+      "identifier": "",
+      "mycroftname": "m p d",
+      "name": "MMM-MPD"
+    },
+    {
+      "URL": "https://github.com/nebulx29/MMM-nasaastropic",
+      "identifier": "",
+      "mycroftname": "nasa astro pic",
+      "name": "MMM-nasaastropic"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-NASA",
+      "identifier": "",
+      "mycroftname": "nasa",
+      "name": "MMM-NASA"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-NEO",
+      "identifier": "",
+      "mycroftname": "neo",
+      "name": "MMM-NEO"
+    },
+    {
+      "URL": "https://github.com/fewieden/MMM-NFL",
+      "identifier": "",
+      "mycroftname": "nfl",
+      "name": "MMM-NFL"
+    },
+    {
+      "URL": "https://github.com/fewieden/MMM-NHL",
+      "identifier": "",
+      "mycroftname": "nhl",
+      "name": "MMM-NHL"
+    },
+    {
+      "URL": "https://github.com/raywo/MMM-NowPlayingOnSpotify",
+      "identifier": "",
+      "mycroftname": "now playing on spotify",
+      "name": "MMM-NowPlayingOnSpotify"
+    },
+    {
+      "URL": "https://github.com/GHLasse/MagicMirror-Olympia-Module",
+      "identifier": "",
+      "mycroftname": "olympia",
+      "name": "MMM-Olympia"
+    },
+    {
+      "URL": "https://github.com/fewieden/MMM-OlympicGames",
+      "identifier": "",
+      "mycroftname": "olympic games",
+      "name": "MMM-OlympicGames"
+    },
+    {
+      "URL": "https://github.com/spelinski/MMM-PandorasMirror",
+      "identifier": "",
+      "mycroftname": "pandoras mirror",
+      "name": "MMM-PandorasMirror"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-PetFinder",
+      "identifier": "",
+      "mycroftname": "pet finder",
+      "name": "MMM-PetFinder"
+    },
+    {
+      "URL": "https://github.com/RobertShippey/MMM-PlexDeck",
+      "identifier": "",
+      "mycroftname": "plex deck",
+      "name": "MMM-PlexDeck"
+    },
+    {
+      "URL": "https://github.com/ptrbld/MMM-Podcast",
+      "identifier": "",
+      "mycroftname": "podcast",
+      "name": "MMM-Podcast"
+    },
+    {
+      "URL": "https://github.com/Sispheor/MMM-quote-of-the-day",
+      "identifier": "",
+      "mycroftname": "quote of the day",
+      "name": "MMM-quote-of-the-day"
+    },
+    {
+      "URL": "https://github.com/diego-vieira/MMM-RandomPhoto",
+      "identifier": "",
+      "mycroftname": "random photo",
+      "name": "MMM-RandomPhoto"
+    },
+    {
+      "URL": "https://github.com/cowboysdude/MMM-Recipe",
+      "identifier": "",
+      "mycroftname": "recipe",
+      "name": "MMM-Recipe"
+    },
+    {
+      "URL": "https://github.com/kjb085/MMM-Reddit",
+      "identifier": "",
+      "mycroftname": "reddit",
+      "name": "MMM-Reddit"
+    },
+    {
+      "URL": "https://github.com/spectroman/mmm-food2fork-recipes",
+      "identifier": "",
+      "mycroftname": "food to fork recipes",
+      "name": "MMM-food2fork-recipes"
+    },
+    {
+      "URL": "https://github.com/AdamMoses-GitHub/MMM-RottenTomatoes",
+      "identifier": "",
+      "mycroftname": "rotten tomatoes",
+      "name": "MMM-RottenTomatoes"
+    },
+    {
+      "URL": "https://github.com/fewieden/MMM-ScottishPremierLeague",
+      "identifier": "",
+      "mycroftname": "scottish premier league",
+      "name": "MMM-ScottishPremierLeague"
+    },
+    {
+      "URL": "https://github.com/kevinatown/MMM-Screencast",
+      "identifier": "",
+      "mycroftname": "screen cast",
+      "name": "MMM-Screencast"
+    },
+    {
+      "URL": "https://github.com/PtrBld/MMM-Scrobbler",
+      "identifier": "",
+      "mycroftname": "scrobbler",
+      "name": "MMM-Scrobbler"
+    },
+    {
+      "URL": "https://github.com/MichMich/MMM-Snow",
+      "identifier": "",
+      "mycroftname": "snow",
+      "name": "MMM-Snow"
+    },
+    {
+      "URL": "https://github.com/LukeSkywalker92/MMM-SoccerLiveScore",
+      "identifier": "",
+      "mycroftname": "soccer live score",
+      "name": "MMM-SoccerLiveScore"
+    },
+    {
+      "URL": "https://github.com/fewieden/MMM-soccer",
+      "identifier": "",
+      "mycroftname": "soccer",
+      "name": "MMM-soccer"
+    },
+    {
+      "URL": "https://github.com/CatoAntonsen/MMM-SpotifyConnectUI",
+      "identifier": "",
+      "mycroftname": "spotify connect u i",
+      "name": "MMM-SpotifyConnectUI"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-SunRiseSet",
+      "identifier": "",
+      "mycroftname": "sun rise set",
+      "name": "MMM-SunRiseSet"
+    },
+    {
+      "URL": "https://github.com/mykle1/MMM-SORT",
+      "identifier": "",
+      "mycroftname": "sort",
+      "name": "MMM-SORT"
+    },
+    {
+      "URL": "https://github.com/Thlb/MMM-teamspeak3",
+      "identifier": "",
+      "mycroftname": "team speak 3",
+      "name": "MMM-teamspeak3"
+    },
+    {
+      "URL": "https://github.com/ThePirateWhoSmellsOfSunflowers/MMM-mumble",
+      "identifier": "",
+      "mycroftname": "mumble",
+      "name": "MMM-mumble"
+    },
+    {
+      "URL": "https://github.com/Kiina/MMM-trakt",
+      "identifier": "",
+      "mycroftname": "trakt",
+      "name": "MMM-Trakt"
+    },
+    {
+      "URL": "https://github.com/AdamMoses-GitHub/MMM-TweetsByTimelineOrList",
+      "identifier": "",
+      "mycroftname": "tweets by timeline or list",
+      "name": "MMM-TweetsByTimelineOrList"
+    },
+    {
+      "URL": "https://github.com/AdamMoses-GitHub/MMM-TwitterTrendsByPlace",
+      "identifier": "",
+      "mycroftname": "twitter trends by place",
+      "name": "MMM-TwitterTrendsByPlace"
+    },
+    {
+      "URL": "https://github.com/kolbyjack/MMM-Wallpaper",
+      "identifier": "",
+      "mycroftname": "wallpaper",
+      "name": "MMM-Wallpaper"
+    },
+    {
+      "URL": "https://github.com/croxis/planetrise",
+      "identifier": "",
+      "mycroftname": "planet rise",
+      "name": "planetrise"
+    },
+    {
+      "URL": "https://github.com/croxis/PlutoTime",
+      "identifier": "",
+      "mycroftname": "pluto time",
+      "name": "PlutoTime"
+    },
+    {
+      "URL": "https://github.com/KirAsh4/random_quotes/",
+      "identifier": "",
+      "mycroftname": "random quotes",
+      "name": "random_quotes"
+    },
+    {
+      "URL": "https://github.com/Blastitt/twitControl",
+      "identifier": "",
+      "mycroftname": "twit control",
+      "name": "twitControl"
+    },
+    {
+      "URL": "https://github.com/eouia/worldclock",
+      "identifier": "",
+      "mycroftname": "world clock",
+      "name": "worldclock"
+    },
+    {
+      "URL": "https://github.com/splattner/MMM-bernwordclock",
+      "identifier": "",
+      "mycroftname": "swiss bern dialect word clock",
+      "name": "Swiss, Bern dialect Word Clock"
+    },
+    {
+      "URL": "https://github.com/alexBeuth/MMM-germanwordclock",
+      "identifier": "",
+      "mycroftname": "german word clock",
+      "name": "German Word Clock"
+    },
+    {
+      "URL": "https://github.com/salpar/MagicMirror-QuoteCatalog/",
+      "identifier": "",
+      "mycroftname": "quote catalog",
+      "name": "The Quote Catalog"
+    },
+    {
+      "URL": "https://github.com/C4TFLY/MMM-YouTube-API",
+      "identifier": "",
+      "mycroftname": "youtube a p i",
+      "name": "MMM-YouTube-API"
+    },
+    {
+      "URL": "https://github.com/parnic/MMM-Unsplash",
+      "identifier": "",
+      "mycroftname": "unsplash",
+      "name": "MMM-Unsplash"
+    }
+  ],
+  "settingsVersion": 2,
+  "brightness": 200
+}
