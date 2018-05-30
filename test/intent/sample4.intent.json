@@ -1,0 +1,8 @@
+{
+  "utterance": "update weather",
+  "intent_type": "ModuleActionIntent",
+  "intent": {
+    "ModuleActionKeywords": "update",
+    "ModuleKeywords": "weather"
+  }
+}

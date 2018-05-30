@@ -1,0 +1,8 @@
+{
+  "utterance": "hide monitor",
+  "intent_type": "SystemActionIntent",
+  "intent": {
+    "SystemActionKeywords": "hide",
+    "SystemKeywords": "monitor"
+  }
+}

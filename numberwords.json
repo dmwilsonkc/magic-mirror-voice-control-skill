@@ -1,0 +1,768 @@
+{
+  "numberwords": [
+    {
+      "word": "ten",
+      "number": 10
+    },
+    {
+      "word": "eleven",
+      "number": 11
+    },
+    {
+      "word": "twelve",
+      "number": 12
+    },
+    {
+      "word": "thirteen",
+      "number": 13
+    },
+    {
+      "word": "fourteen",
+      "number": 14
+    },
+    {
+      "word": "fifteen",
+      "number": 15
+    },
+    {
+      "word": "sixteen",
+      "number": 16
+    },
+    {
+      "word": "seventeen",
+      "number": 17
+    },
+    {
+      "word": "eighteen",
+      "number": 18
+    },
+    {
+      "word": "nineteen",
+      "number": 19
+    },
+    {
+      "word": "twenty",
+      "number": 20
+    },
+    {
+      "word": "twenty one",
+      "number": 21
+    },
+    {
+      "word": "twenty two",
+      "number": 22
+    },
+    {
+      "word": "twenty three",
+      "number": 23
+    },
+    {
+      "word": "twenty four",
+      "number": 24
+    },
+    {
+      "word": "twenty five",
+      "number": 25
+    },
+    {
+      "word": "twenty six",
+      "number": 26
+    },
+    {
+      "word": "twenty seven",
+      "number": 27
+    },
+    {
+      "word": "twenty eight",
+      "number": 28
+    },
+    {
+      "word": "twenty nine",
+      "number": 29
+    },
+    {
+      "word": "thirty",
+      "number": 30
+    },
+    {
+      "word": "thirty one",
+      "number": 31
+    },
+    {
+      "word": "thirty two",
+      "number": 32
+    },
+    {
+      "word": "thirty three",
+      "number": 33
+    },
+    {
+      "word": "thirty four",
+      "number": 34
+    },
+    {
+      "word": "thirty five",
+      "number": 35
+    },
+    {
+      "word": "thirty six",
+      "number": 36
+    },
+    {
+      "word": "thirty seven",
+      "number": 37
+    },
+    {
+      "word": "thirty eight",
+      "number": 38
+    },
+    {
+      "word": "thirty nine",
+      "number": 39
+    },
+    {
+      "word": "forty",
+      "number": 40
+    },
+    {
+      "word": "forty one",
+      "number": 41
+    },
+    {
+      "word": "forty two",
+      "number": 42
+    },
+    {
+      "word": "forty three",
+      "number": 43
+    },
+    {
+      "word": "forty four",
+      "number": 44
+    },
+    {
+      "word": "forty five",
+      "number": 45
+    },
+    {
+      "word": "forty six",
+      "number": 46
+    },
+    {
+      "word": "forty seven",
+      "number": 47
+    },
+    {
+      "word": "forty eight",
+      "number": 48
+    },
+    {
+      "word": "forty nine",
+      "number": 49
+    },
+    {
+      "word": "fifty",
+      "number": 50
+    },
+    {
+      "word": "fifty one",
+      "number": 51
+    },
+    {
+      "word": "fifty two",
+      "number": 52
+    },
+    {
+      "word": "fifty three",
+      "number": 53
+    },
+    {
+      "word": "fifty four",
+      "number": 54
+    },
+    {
+      "word": "fifty five",
+      "number": 55
+    },
+    {
+      "word": "fifty six",
+      "number": 56
+    },
+    {
+      "word": "fifty seven",
+      "number": 57
+    },
+    {
+      "word": "fifty eight",
+      "number": 58
+    },
+    {
+      "word": "fifty nine",
+      "number": 59
+    },
+    {
+      "word": "sixty",
+      "number": 60
+    },
+    {
+      "word": "sixty one",
+      "number": 61
+    },
+    {
+      "word": "sixty two",
+      "number": 62
+    },
+    {
+      "word": "sixty three",
+      "number": 63
+    },
+    {
+      "word": "sixty four",
+      "number": 64
+    },
+    {
+      "word": "sixty five",
+      "number": 65
+    },
+    {
+      "word": "sixty six",
+      "number": 66
+    },
+    {
+      "word": "sixty seven",
+      "number": 67
+    },
+    {
+      "word": "sixty eight",
+      "number": 68
+    },
+    {
+      "word": "sixty nine",
+      "number": 69
+    },
+    {
+      "word": "seventy",
+      "number": 70
+    },
+    {
+      "word": "seventy one",
+      "number": 71
+    },
+    {
+      "word": "seventy two",
+      "number": 72
+    },
+    {
+      "word": "seventy three",
+      "number": 73
+    },
+    {
+      "word": "seventy four",
+      "number": 74
+    },
+    {
+      "word": "seventy five",
+      "number": 75
+    },
+    {
+      "word": "seventy six",
+      "number": 76
+    },
+    {
+      "word": "seventy seven",
+      "number": 77
+    },
+    {
+      "word": "seventy eight",
+      "number": 78
+    },
+    {
+      "word": "seventy nine",
+      "number": 79
+    },
+    {
+      "word": "eighty",
+      "number": 80
+    },
+    {
+      "word": "eighty one",
+      "number": 81
+    },
+    {
+      "word": "eighty two",
+      "number": 82
+    },
+    {
+      "word": "eighty three",
+      "number": 83
+    },
+    {
+      "word": "eighty four",
+      "number": 84
+    },
+    {
+      "word": "eighty five",
+      "number": 85
+    },
+    {
+      "word": "eighty six",
+      "number": 86
+    },
+    {
+      "word": "eighty seven",
+      "number": 87
+    },
+    {
+      "word": "eighty eight",
+      "number": 88
+    },
+    {
+      "word": "eighty nine",
+      "number": 89
+    },
+    {
+      "word": "ninety",
+      "number": 90
+    },
+    {
+      "word": "ninety one",
+      "number": 91
+    },
+    {
+      "word": "ninety two",
+      "number": 92
+    },
+    {
+      "word": "ninety three",
+      "number": 93
+    },
+    {
+      "word": "ninety four",
+      "number": 94
+    },
+    {
+      "word": "ninety five",
+      "number": 95
+    },
+    {
+      "word": "ninety six",
+      "number": 96
+    },
+    {
+      "word": "ninety seven",
+      "number": 97
+    },
+    {
+      "word": "ninety eight",
+      "number": 98
+    },
+    {
+      "word": "ninety nine",
+      "number": 99
+    },
+    {
+      "word": "one hundred",
+      "number": 100
+    },
+    {
+      "word": "one hundred one",
+      "number": 101
+    },
+    {
+      "word": "one hundred two",
+      "number": 102
+    },
+    {
+      "word": "one hundred three",
+      "number": 103
+    },
+    {
+      "word": "one hundred four",
+      "number": 104
+    },
+    {
+      "word": "one hundred five",
+      "number": 105
+    },
+    {
+      "word": "one hundred six",
+      "number": 106
+    },
+    {
+      "word": "one hundred seven",
+      "number": 107
+    },
+    {
+      "word": "one hundred eight",
+      "number": 108
+    },
+    {
+      "word": "one hundred nine",
+      "number": 109
+    },
+    {
+      "word": "one hundred ten",
+      "number": 110
+    },
+    {
+      "word": "one hundred eleven",
+      "number": 111
+    },
+    {
+      "word": "one hundred twelve",
+      "number": 112
+    },
+    {
+      "word": "one hundred thirteen",
+      "number": 113
+    },
+    {
+      "word": "one hundred fourteen",
+      "number": 114
+    },
+    {
+      "word": "one hundred fifteen",
+      "number": 115
+    },
+    {
+      "word": "one hundred sixteen",
+      "number": 116
+    },
+    {
+      "word": "one hundred seventeen",
+      "number": 117
+    },
+    {
+      "word": "one hundred eighteen",
+      "number": 118
+    },
+    {
+      "word": "one hundred nineteen",
+      "number": 119
+    },
+    {
+      "word": "one hundred twenty",
+      "number": 120
+    },
+    {
+      "word": "one hundred twenty one",
+      "number": 121
+    },
+    {
+      "word": "one hundred twenty two",
+      "number": 122
+    },
+    {
+      "word": "one hundred twenty three",
+      "number": 123
+    },
+    {
+      "word": "one hundred twenty four",
+      "number": 124
+    },
+    {
+      "word": "one hundred twenty five",
+      "number": 125
+    },
+    {
+      "word": "one hundred twenty six",
+      "number": 126
+    },
+    {
+      "word": "one hundred twenty seven",
+      "number": 127
+    },
+    {
+      "word": "one hundred twenty eight",
+      "number": 128
+    },
+    {
+      "word": "one hundred twenty nine",
+      "number": 129
+    },
+    {
+      "word": "one hundred thirty",
+      "number": 130
+    },
+    {
+      "word": "one hundred thirty one",
+      "number": 131
+    },
+    {
+      "word": "one hundred thirty two",
+      "number": 132
+    },
+    {
+      "word": "one hundred thirty three",
+      "number": 133
+    },
+    {
+      "word": "one hundred thirty four",
+      "number": 134
+    },
+    {
+      "word": "one hundred thirty five",
+      "number": 135
+    },
+    {
+      "word": "one hundred thirty six",
+      "number": 136
+    },
+    {
+      "word": "one hundred thirty seven",
+      "number": 137
+    },
+    {
+      "word": "one hundred thirty eight",
+      "number": 138
+    },
+    {
+      "word": "one hundred thirty nine",
+      "number": 139
+    },
+    {
+      "word": "one hundred forty",
+      "number": 140
+    },
+    {
+      "word": "one hundred forty one",
+      "number": 141
+    },
+    {
+      "word": "one hundred forty two",
+      "number": 142
+    },
+    {
+      "word": "one hundred forty three",
+      "number": 143
+    },
+    {
+      "word": "one hundred forty four",
+      "number": 144
+    },
+    {
+      "word": "one hundred forty five",
+      "number": 145
+    },
+    {
+      "word": "one hundred forty six",
+      "number": 146
+    },
+    {
+      "word": "one hundred forty seven",
+      "number": 147
+    },
+    {
+      "word": "one hundred forty eight",
+      "number": 148
+    },
+    {
+      "word": "one hundred forty nine",
+      "number": 149
+    },
+    {
+      "word": "one hundred fifty",
+      "number": 150
+    },
+    {
+      "word": "one hundred fifty one",
+      "number": 151
+    },
+    {
+      "word": "one hundred fifty two",
+      "number": 152
+    },
+    {
+      "word": "one hundred fifty three",
+      "number": 153
+    },
+    {
+      "word": "one hundred fifty four",
+      "number": 154
+    },
+    {
+      "word": "one hundred fifty five",
+      "number": 155
+    },
+    {
+      "word": "one hundred fifty six",
+      "number": 156
+    },
+    {
+      "word": "one hundred fifty seven",
+      "number": 157
+    },
+    {
+      "word": "one hundred fifty eight",
+      "number": 158
+    },
+    {
+      "word": "one hundred fifty nine",
+      "number": 159
+    },
+    {
+      "word": "one hundred sixty",
+      "number": 160
+    },
+    {
+      "word": "one hundred sixty one",
+      "number": 161
+    },
+    {
+      "word": "one hundred sixty two",
+      "number": 162
+    },
+    {
+      "word": "one hundred sixty three",
+      "number": 163
+    },
+    {
+      "word": "one hundred sixty four",
+      "number": 164
+    },
+    {
+      "word": "one hundred sixty five",
+      "number": 165
+    },
+    {
+      "word": "one hundred sixty six",
+      "number": 166
+    },
+    {
+      "word": "one hundred sixty seven",
+      "number": 167
+    },
+    {
+      "word": "one hundred sixty eight",
+      "number": 168
+    },
+    {
+      "word": "one hundred sixty nine",
+      "number": 169
+    },
+    {
+      "word": "one hundred seventy",
+      "number": 170
+    },
+    {
+      "word": "one hundred seventy one",
+      "number": 171
+    },
+    {
+      "word": "one hundred seventy two",
+      "number": 172
+    },
+    {
+      "word": "one hundred seventy three",
+      "number": 173
+    },
+    {
+      "word": "one hundred seventy four",
+      "number": 174
+    },
+    {
+      "word": "one hundred seventy five",
+      "number": 175
+    },
+    {
+      "word": "one hundred seventy six",
+      "number": 176
+    },
+    {
+      "word": "one hundred seventy seven",
+      "number": 177
+    },
+    {
+      "word": "one hundred seventy eight",
+      "number": 178
+    },
+    {
+      "word": "one hundred seventy nine",
+      "number": 179
+    },
+    {
+      "word": "one hundred eighty",
+      "number": 180
+    },
+    {
+      "word": "one hundred eighty one",
+      "number": 181
+    },
+    {
+      "word": "one hundred eighty two",
+      "number": 182
+    },
+    {
+      "word": "one hundred eighty three",
+      "number": 183
+    },
+    {
+      "word": "one hundred eighty four",
+      "number": 184
+    },
+    {
+      "word": "one hundred eighty five",
+      "number": 185
+    },
+    {
+      "word": "one hundred eighty six",
+      "number": 186
+    },
+    {
+      "word": "one hundred eighty seven",
+      "number": 187
+    },
+    {
+      "word": "one hundred eighty eight",
+      "number": 188
+    },
+    {
+      "word": "one hundred eighty nine",
+      "number": 189
+    },
+    {
+      "word": "one hundred ninety",
+      "number": 190
+    },
+    {
+      "word": "one hundred ninety one",
+      "number": 191
+    },
+    {
+      "word": "one hundred ninety two",
+      "number": 192
+    },
+    {
+      "word": "one hundred ninety three",
+      "number": 193
+    },
+    {
+      "word": "one hundred ninety four",
+      "number": 194
+    },
+    {
+      "word": "one hundred ninety five",
+      "number": 195
+    },
+    {
+      "word": "one hundred ninety six",
+      "number": 196
+    },
+    {
+      "word": "one hundred ninety seven",
+      "number": 197
+    },
+    {
+      "word": "one hundred ninety eight",
+      "number": 198
+    },
+    {
+      "word": "one hundred ninety nine",
+      "number": 199
+    },
+    {
+      "word": "two hundred",
+      "number": 200
+    }
+  ]
+}

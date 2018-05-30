@@ -1,0 +1,8 @@
+{
+  "utterance": "list installed modules",
+  "intent_type": "ListInstalledModulesIntent",
+  "intent": {
+    "ListInstalledKeywords": "list installed",
+    "SingleModuleKeywords": "modules"
+  }
+}

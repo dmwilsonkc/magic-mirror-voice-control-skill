@@ -1,0 +1,8 @@
+{
+  "utterance": "turn off clock",
+  "intent_type": "ModuleActionIntent",
+  "intent": {
+    "ModuleActionKeywords": "turn off",
+    "ModuleKeywords": "clock"
+  }
+}

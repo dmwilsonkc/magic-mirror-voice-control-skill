@@ -1,0 +1,8 @@
+{
+  "utterance": "set mirror brightness to 80%",
+  "intent_type": "AdjustBrightnessIntent",
+  "intent": {
+    "BrightnessActionKeywords": "set mirror brightness to",
+    "BrightnessValueKeywords": "80%"
+  }
+}

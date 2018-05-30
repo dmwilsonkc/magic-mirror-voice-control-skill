@@ -1,0 +1,8 @@
+{
+  "utterance": "swipe right",
+  "intent_type": "HandleSwipeIntent",
+  "intent": {
+    "SwipeActionKeywords": "swipe",
+    "LeftRightKeywords": "right"
+  }
+}
