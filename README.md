@@ -2,7 +2,7 @@
 Voice commands to Mycroft to control a Magic Mirror using the MMM-Remote-Control module.
 
 ## Description
-This mycroft skill passes commands to a MagicMirror installed on a Raspberry Pi. It requires a working install of MagicMirror[MagicMirror](https://github.com/MichMich/MagicMirror) and the [MMM-Remote-Control module](https://github.com/Jopyth/MMM-Remote-Control) must be installed.
+This mycroft skill passes commands to a MagicMirror installed on a Raspberry Pi. It requires a working install of [MagicMirror](https://github.com/MichMich/MagicMirror) and the [MMM-Remote-Control module](https://github.com/Jopyth/MMM-Remote-Control) must be installed.
 
 MYCROFT MUST BE INSTALLED AND WORKING ON THE SAME RASPBERRY PI.
 
