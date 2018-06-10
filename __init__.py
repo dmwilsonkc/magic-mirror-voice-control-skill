@@ -23,6 +23,7 @@ from mycroft.util.log import getLogger
 import os
 from os.path import dirname, join
 import requests
+import ipaddress
 import json
 import re
 
@@ -59,22 +60,57 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
 # For your changes to persist all modifications should be made to the file "AvailableModules.json"
     def initialize(self):
 
-        self.url = 'http://localhost:8080/remote'
-        payload = {'action': 'MODULE_DATA'}
-        r = requests.get(url=self.url, params=payload)
-        data = r.json()
-        #with open('Moudule_Data.json', 'w') as f:
-            #json.dump(data, f, indent = 2)
+        try:
+            with open (join(self._dir, 'ip.json')) as f:
+                ip = json.load(f)
+            ipAddress = ip['ipAddress']
 
-        with open (join(self._dir, 'AvailableModules.json')) as f:
-            AvailableData = json.load(f)
+            self.url = 'http://' + ipAddress + ':8080/remote'
+            payload = {'action': 'MODULE_DATA'}
+            r = requests.get(url=self.url, params=payload)
+            data = r.json()
 
-        for moduleData in AvailableData['moduleData']:
-            for item in data['moduleData']:
-                if moduleData['name'] == item['name']:
-                    moduleData['identifier'] = item['identifier']
-        with open (join(self.file_system.path, 'AvailableModulesWithIdentifier.json'), 'w') as f:
-            json.dump(AvailableData, f, indent = 2)
+
+            with open (join(self._dir, 'AvailableModules.json')) as f:
+                AvailableData = json.load(f)
+
+            for moduleData in AvailableData['moduleData']:
+                for item in data['moduleData']:
+                    if moduleData['name'] == item['name']:
+                        moduleData['identifier'] = item['identifier']
+            with open (join(self.file_system.path, 'AvailableModulesWithIdentifier.json'), 'w') as f:
+                json.dump(AvailableData, f, indent = 2)
+
+            self.speak('I have successfully connected to the magic mirror.')
+
+        except requests.exceptions.ConnectionError:
+            self.speak('I was unable to connect to the magic mirror at that I P address. Please verify the I P address and that the magic mirror is accessible')
+
+        except IOError:
+            self.speak('To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. \
+            what is the I P address of the magic mirror you would like to control with your voice', expect_response=True)
+
+
+# The following intent handler is used to set the ip address of the MagicMirror by saving it to a file ip.json
+# The file is saved into the skill's directory which causes Mycroft to reload the skill. After the skill reloads
+# the above initialize self code will find the ip.json file and load the MagicMirror ip address. If it is not the
+# correct address, or if the MagicMirror is not accessible the initilize self code will prompt the user to check the ip address
+
+    @intent_handler(IntentBuilder('SetMirrorIpAddress').require('SetIpKeywords').optionally('IpAddress'))
+    def handle_Set_Ip_command(self, message):
+        keywords = message.data.get('SetIpKeywords')
+        utterance = message.data['utterance']
+        utterance = utterance.replace(keywords, '')
+        utterance = utterance.replace(' ', '')
+        self.speak('I am setting the I P address to {}'.format(utterance))
+        try:
+            ipaddress.ip_address(utterance)
+            ip = {'ipAddress': utterance}
+            with open (join(self._dir,'ip.json'), 'w') as f:
+                json.dump(ip, f)
+        except:
+            self.speak('Im sorry that is not a valid ip address. please try again', expect_response=True)
+
 
 # This code builds the SystemActionIntent which are commands that are not directed at a specific module
 
