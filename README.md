@@ -45,7 +45,7 @@ Navigate to the /opt/mycroft/skills $ folder
 git clone https://github.com/dmwilsonkc/magic-mirror-voice-control-skill.git
 
 When Mycroft initializes the skill, it will ask you for the ip address of your MagicMirror (Be ready, it happens fast).
-You must use on of the phrases from the SetIpKeywords.voc if you wish to set the ip by voice.
+You must use one of the phrases from the SetIpKeywords.voc if you wish to set the ip by voice.
 For example when you hear the sound that Mycroft is listening:
 
 * set mirror ip address 192.168.X.X
