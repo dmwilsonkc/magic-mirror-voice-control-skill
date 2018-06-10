@@ -2,11 +2,12 @@
 Voice commands to Mycroft to control a Magic Mirror using the MMM-Remote-Control module.
 
 ## Description
-This mycroft skill passes commands to a MagicMirror installed on a Raspberry Pi. It requires a working install of [MagicMirror](https://github.com/MichMich/MagicMirror) and the [MMM-Remote-Control module](https://github.com/Jopyth/MMM-Remote-Control) must be installed.
-
-MYCROFT MUST BE INSTALLED AND WORKING ON THE SAME RASPBERRY PI.
+This mycroft skill passes commands to a MagicMirror installed on a Raspberry Pi. It requires a working install of [MagicMirror](https://github.com/MichMich/MagicMirror) and the [MMM-Remote-Control module](https://github.com/Jopyth/MMM-Remote-Control) must be installed AND ACCESSIBLE ON YOUR LOCAL NETWORK.
 
 This skill requires MMM-Remote-Control be installed and working properly.
+
+You must configure the MagicMirror's config.js file to properly whitelist the ip address of your Mycroft.
+
 You can use this skill to hide or show modules, update the mirror or individual modules,
 refresh or restart the mirror, list installed modules, install modules by name (will still require you
 to configure the MagicMirror config.js by SSH or VNC), change pages of modules by either swipe commands
@@ -38,6 +39,37 @@ url for example 'http://localhost:8080/remote?action=someaction&param=someparame
 
 This skill includes intents for 90% of what the MMM-Remote-Control module is capable of doing. The other 10% is a work in progress.
 
+## Installation
+Navigate to the /opt/mycroft/skills $ folder
+
+git clone https://github.com/dmwilsonkc/magic-mirror-voice-control-skill.git
+
+When Mycroft initializes the skill, it will ask you for the ip address of your MagicMirror (Be ready, it happens fast).
+You must use on of the phrases from the SetIpKeywords.voc if you wish to set the ip by voice.
+For example when you hear the sound that Mycroft is listening:
+
+* set mirror ip address 192.168.X.X
+* make mirror ip address 192.168.X.X
+* mirror ip address is 192.168.X.X
+* the mirror ip address is 192.168.X.X
+* mirror ip address 192.168.X.X
+* ip address 192.168.X.X
+* set ip address 192.168.X.X
+
+Of course you can always type any of those commands into Mycroft's CLI at any point after the skill is initialized.
+You can also change the ip address where Mycroft tries to connect to the MagicMirror by using any of those commands.
+
+IMPORTANT:
+The skill is configured to connect to the default port of :8080, which is the default port of the MagicMirror. If you change that
+in the config,js of the MagicMirror, this skill will no longer connect to the MagicMirror.
+
+It can be tricky to properly whitelist the ip of your Mycroft in the MagicMirror's config.js. Instructions can be found [here](https://github.com/Jopyth/MMM-Remote-Control/issues/75).
+
+In the MagicMirror's config.js:
+
+Replace: address: "localhost", With: address: "0.0.0.0", and
+Replace: ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], with ipWhitelist: ["127.0.0.1", "192.168.X.1/24"],
+
 ## Examples
 * "Hey Mycroft: hide clock"
 * "show clock"
@@ -66,13 +98,11 @@ This skill includes intents for 90% of what the MMM-Remote-Control module is cap
 
 ## Thank You's
 * Åke Forslund [Forslund](https://github.com/forslund) for helping a noob with a ton of questions
+* Kathy Reid [@KathyReid](https://community.mycroft.ai/u/kathyreid/summary) for her advice
 * Michael Teeuw [MichMich](https://github.com/MichMich) the creator of MagicMirror
 * [Jopyth](https://github.com/Jopyth) for MMM-Remote-Control module
 * fewieden a.k.a. [strawberry 3.141](https://github.com/fewieden) for pointing me in the right direction at the start
 
 
 ## Require
-platform_picroft
-
-## Exclude
-platform_mark1 platform_plasmoid
+platform_picroft, or platform_mark1, or platform_plasmoid
