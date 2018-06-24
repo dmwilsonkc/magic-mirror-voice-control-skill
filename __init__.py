@@ -181,7 +181,7 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
                 identifier = moduleData['identifier']
                 if identifier != "":
                     installed_modules = installed_modules + ', ' + mycroftname
-        self.speak('The currently installed modules are{}'.format(installed_modules))
+            self.speak('The currently installed modules are{}'.format(installed_modules))
 
 # This intent handles change page commands to be used with the MMM-pages module. The MMM-pages module must be installed
 # for this intent to work. Find it on github @ https://github.com/edward-shen/MMM-pages
