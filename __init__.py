@@ -78,8 +78,7 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
                 for item in data['moduleData']:
                     if moduleData['name'] == item['name']:
                         moduleData['identifier'] = item['identifier']
-            with open (join(self.file_system.path, 'AvailableModulesWithIdentifier.json'), 'w') as f:
-                json.dump(AvailableData, f, indent = 2)
+            self.moduleData = AvailableData
 
             self.speak('I have successfully connected to the magic mirror.')
 
@@ -175,8 +174,7 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
 
     @intent_handler(IntentBuilder('ListInstalledModulesIntent').require('ListInstalledKeywords').require('SingleModuleKeywords'))
     def handle_list_installed_modules_command(self, message):
-        with open(join(self.file_system.path, 'AvailableModulesWithIdentifier.json')) as f:
-            data = json.load(f)
+            data = self.moduleData
             installed_modules = ''
             for moduleData in data['moduleData']:
                 mycroftname = moduleData['mycroftname']
@@ -229,7 +227,6 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
 
     @intent_handler(IntentBuilder('HandleSwipeIntent').require('SwipeActionKeywords').require('LeftRightKeywords'))
     def handle_pages_command(self, message):
-        url = 'http://localhost:8080/remote'
         direction = message.data.get('LeftRightKeywords')
         if direction == 'right':
             System = 'PAGE_DECREMENT'
@@ -313,8 +310,7 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
             module_action = 'SHOW'
 
         module = message.data.get('ModuleKeywords')
-        with open (join(self.file_system.path, 'AvailableModulesWithIdentifier.json')) as f:
-            data = json.load(f)
+        data = self.moduleData
         for item in data['moduleData']:
             if module == item['mycroftname']:
                 module_id = item['identifier']
