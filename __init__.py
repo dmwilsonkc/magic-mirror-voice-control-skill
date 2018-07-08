@@ -26,6 +26,13 @@ import requests
 import ipaddress
 import json
 import re
+import mycroft.version
+from threading import Thread, Lock
+from mycroft.messagebus.client.ws import WebsocketClient
+from mycroft.messagebus.message import Message
+from mycroft.util.log import LOG
+from mycroft.tts import TTS
+from mycroft.client.speech.listener import RecognizerLoop
 
 __author__ = 'dmwilsonkc'
 
@@ -66,6 +73,7 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
             ipAddress = ip['ipAddress']
 
             self.url = 'http://' + ipAddress + ':8080/remote'
+            self.voiceurl = 'http://' + ipAddress + ':8080/kalliope'
             payload = {'action': 'MODULE_DATA'}
             r = requests.get(url=self.url, params=payload)
             data = r.json()
@@ -79,7 +87,6 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
                     if moduleData['name'] == item['name']:
                         moduleData['identifier'] = item['identifier']
             self.moduleData = AvailableData
-
             self.speak('I have successfully connected to the magic mirror.')
 
         except requests.exceptions.ConnectionError:
@@ -89,7 +96,24 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
             self.speak('To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. \
             what is the I P address of the magic mirror you would like to control with your voice', expect_response=True)
 
+        self.add_event('recognizer_loop:wakeword', self.handle_listen)
+        self.add_event('recognizer_loop:utterance', self.handle_utterance)
+        self.add_event('speak', self.handle_speak)
 
+    def handle_listen(self, message):
+        voice_payload = {"notification":"KALLIOPE", "payload": "Listening"}
+        r = requests.post(url=self.voiceurl, data=voice_payload)
+
+    def handle_utterance(self, message):
+        utterance = message.data.get('utterances')
+        voice_payload = {"notification":"KALLIOPE", "payload": utterance}
+        r = requests.post(url=self.voiceurl, data=voice_payload)
+
+    def handle_speak(self, message):
+        speak = message.data.get('utterance')
+        voice_payload = {"notification":"KALLIOPE", "payload": speak}
+        r = requests.post(url=self.voiceurl, data=voice_payload)
+        
 # The following intent handler is used to set the ip address of the MagicMirror by saving it to a file ip.json
 # The file is saved into the skill's directory which causes Mycroft to reload the skill. After the skill reloads
 # the above initialize self code will find the ip.json file and load the MagicMirror ip address. If it is not the
