@@ -97,7 +97,7 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
             what is the I P address of the magic mirror you would like to control with your voice', expect_response=True)
 
         self.add_event('recognizer_loop:wakeword', self.handle_listen)
-        #self.add_event('recognizer_loop:utterance', self.handle_utterance)
+        self.add_event('recognizer_loop:utterance', self.handle_utterance)
         self.add_event('speak', self.handle_speak)
 
     def handle_listen(self, message):
