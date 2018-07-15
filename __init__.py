@@ -113,8 +113,8 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
 
     def handle_speak(self, message):
         self.mycroft_utterance = message.data.get('utterance')
-        voice_payload = {"notification":"KALLIOPE", "payload": self.mycroft_utterance}
-        r = requests.post(url=self.voiceurl, data=voice_payload)
+        #voice_payload = {"notification":"KALLIOPE", "payload": self.mycroft_utterance}
+        #r = requests.post(url=self.voiceurl, data=voice_payload)
 
     def handle_output(self, message):
         voice_payload = {"notification":"KALLIOPE", "payload": self.mycroft_utterance}
