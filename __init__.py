@@ -98,7 +98,7 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
 
         self.add_event('recognizer_loop:wakeword', self.handle_listen)
         self.add_event('recognizer_loop:utterance', self.handle_utterance)
-        self.add_event('audio_output_start', self.handle_speak)
+        self.add_event('recognizer_loop:audio_output_start', self.handle_speak)
 
     def handle_listen(self, message):
         voice_payload = {"notification":"KALLIOPE", "payload": "Listening"}
