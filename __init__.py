@@ -74,6 +74,7 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
 
             self.url = 'http://' + ipAddress + ':8080/remote'
             self.voiceurl = 'http://' + ipAddress + ':8080/kalliope'
+            self.mycroft_utterance = ''
             payload = {'action': 'MODULE_DATA'}
             r = requests.get(url=self.url, params=payload)
             data = r.json()
@@ -98,7 +99,8 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
 
         self.add_event('recognizer_loop:wakeword', self.handle_listen)
         self.add_event('recognizer_loop:utterance', self.handle_utterance)
-        self.add_event('recognizer_loop:audio_output_start', self.handle_speak)
+        self.add_event('speak', self.handle_speak)
+        self.add_event('recognizer_loop:audio_output_start', self.handle_output)
 
     def handle_listen(self, message):
         voice_payload = {"notification":"KALLIOPE", "payload": "Listening"}
@@ -110,8 +112,12 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
         r = requests.post(url=self.voiceurl, data=voice_payload)
 
     def handle_speak(self, message):
-        speak = message.data.get('utterance')
-        voice_payload = {"notification":"KALLIOPE", "payload": speak}
+        self.mycroft_utterance = message.data.get('utterance')
+        voice_payload = {"notification":"KALLIOPE", "payload": self.mycroft_utterance}
+        r = requests.post(url=self.voiceurl, data=voice_payload)
+
+    def handle_output(self, message):
+        voice_payload = {"notification":"KALLIOPE", "payload": self.mycroft_utterance}
         r = requests.post(url=self.voiceurl, data=voice_payload)
 
 # The following intent handler is used to set the ip address of the MagicMirror by saving it to a file ip.json
