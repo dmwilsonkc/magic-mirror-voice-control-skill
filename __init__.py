@@ -228,7 +228,7 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
             integer = 0
         if page in ('two', '2'):
             integer = 1
-        if page in ('three', '2'):
+        if page in ('three', '3'):
             integer = 2
         if page in ('four', '4', 'for'):
             integer = 3
