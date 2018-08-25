@@ -66,6 +66,10 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
 # The "AvailableModulesWithIdentifier.json" file is recreated everytime the skill initiates.
 # For your changes to persist all modifications should be made to the file "AvailableModules.json"
     def initialize(self):
+        self.url = ''
+        self.voiceurl =''
+        self.mycroft_utterance=''
+        self.moduleData = ''
 
         try:
             with open (join(self._dir, 'ip.json')) as f:
