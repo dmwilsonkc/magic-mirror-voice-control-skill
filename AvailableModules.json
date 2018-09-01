@@ -19,6 +19,12 @@
       "name": "clock"
     },
     {
+      "URL":"https://github.com/raywo/MMM-NowPlayingOnSpotify",
+      "identifier": "",
+      "mycroftname": "now playing on spotify",
+      "name": "MMM-NowPlayingOnSpotify"
+    },
+    {
       "URL":"https://github.com/MichMich/MagicMirror/tree/master/modules/default/calendar",
       "identifier": "",
       "mycroftname": "calendar",
