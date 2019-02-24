@@ -95,7 +95,7 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
             self.speak('I have successfully connected to the magic mirror.')
 
         except requests.exceptions.ConnectionError:
-            if ipAddress == "0.0.0.0":
+            if ipAddress = '0.0.0.0':
                 self.speak('I was unable to connect to the magic mirror at the default ip address. To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. \
                 what is the I P address of the magic mirror you would like to control with your voice?', expect_response=True)
             else:
