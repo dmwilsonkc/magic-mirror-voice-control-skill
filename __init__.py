@@ -72,12 +72,13 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
         self.moduleData = ''
         self.connectionStatus = ''
         self.kalliopeStatus = ''
+        self.ipAddress = ''
 
         try:
             with open (join(self._dir, 'ip.json')) as f:
                 ip = json.load(f)
             ipAddress = ip['ipAddress']
-
+            self.ipAddress = ipAddress
             self.url = 'http://' + ipAddress + ':8080/remote'
             self.voiceurl = 'http://' + ipAddress + ':8080/kalliope'
             self.mycroft_utterance = ''
@@ -161,6 +162,14 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
             if self.kalliopeStatus == 'installed':
                 voice_payload = {"notification":"REMOVE_MESSAGE", "payload": "REMOVE_MESSAGE"}
                 r = requests.post(url=self.voiceurl, data=voice_payload)
+    def handle_not_connected(self):
+        if self.ipAddress == '0.0.0.0':
+            self.speak('I was unable to connect to the magic mirror at the default ip address. To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. \
+            What is the I P address of the magic mirror you would like to control with your voice?', expect_response=True)
+
+        else:
+            self.speak('I was unable to connect to the magic mirror. Please verify the I P address and the configuartion of the magic mirror.')
+
 
 # The following intent handler is used to set the ip address of the MagicMirror by saving it to a file ip.json
 # The file is saved into the skill's directory which causes Mycroft to reload the skill. After the skill reloads
@@ -182,13 +191,6 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
         except:
             self.speak('Im sorry that is not a valid ip address. please try again', expect_response=True)
 
-    def handle_not_connected(self):
-        if ipAddress == '0.0.0.0':
-            self.speak('I was unable to connect to the magic mirror at the default ip address. To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. \
-            What is the I P address of the magic mirror you would like to control with your voice?', expect_response=True)
-
-        else:
-            self.speak('I was unable to connect to the magic mirror. Please verify the I P address and and configuartion of the magic mirror.')
 
 
 # This code builds the SystemActionIntent which are commands that are not directed at a specific module
@@ -252,7 +254,12 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
                 reason = reason.replace('_', ' ')
                 self.speak('There was an error processing your request. The error was caused by', reason)
         else:
-            self.handle_not_connected
+            if self.ipAddress == '0.0.0.0':
+                self.speak('I was unable to connect to the magic mirror at the default ip address. To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. \
+                What is the I P address of the magic mirror you would like to control with your voice?', expect_response=True)
+
+            else:
+                self.speak('I was unable to connect to the magic mirror. Please verify the I P address and the configuartion of the magic mirror.')
 
 # This intent will have mycroft read the installed modules 'mycroftname' so that the user knows which mdules are installed
 
@@ -268,7 +275,12 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
                     installed_modules = installed_modules + ', ' + mycroftname
             self.speak('The currently installed modules are{}'.format(installed_modules))
         else:
-            self.handle_not_connected
+            if self.ipAddress == '0.0.0.0':
+                self.speak('I was unable to connect to the magic mirror at the default ip address. To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. \
+                What is the I P address of the magic mirror you would like to control with your voice?', expect_response=True)
+
+            else:
+                self.speak('I was unable to connect to the magic mirror. Please verify the I P address and the configuartion of the magic mirror.')
 
 # This intent handles change page commands to be used with the MMM-pages module. The MMM-pages module must be installed
 # for this intent to work. Find it on github @ https://github.com/edward-shen/MMM-pages
@@ -310,7 +322,12 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
                 reason = reason.replace('_', ' ')
                 self.speak('There was an error processing your request. The error was caused by', reason)
         else:
-            self.handle_not_connected
+            if self.ipAddress == '0.0.0.0':
+                self.speak('I was unable to connect to the magic mirror at the default ip address. To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. \
+                What is the I P address of the magic mirror you would like to control with your voice?', expect_response=True)
+
+            else:
+                self.speak('I was unable to connect to the magic mirror. Please verify the I P address and the configuartion of the magic mirror.')
 
 # This intent handles swipe commands to be used with the MMM-pages module. The MMM-pages module must be installed
 # for the swipe intent to work. Find it on github @ https://github.com/edward-shen/MMM-pages
@@ -389,7 +406,12 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
                 reason = reason.replace('_', ' ')
                 self.speak('There was an error processing your request. The error was caused by', reason)
         else:
-            self.handle_not_connected
+            if self.ipAddress == '0.0.0.0':
+                self.speak('I was unable to connect to the magic mirror at the default ip address. To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. \
+                What is the I P address of the magic mirror you would like to control with your voice?', expect_response=True)
+
+            else:
+                self.speak('I was unable to connect to the magic mirror. Please verify the I P address and the configuartion of the magic mirror.')
 
     # This intent handles commands directed at specific modules. Commands include: hide
     #  show, display, conceal, install, add, turn on, turn off, update.
@@ -434,7 +456,12 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
                 reason = reason.replace('_', ' ')
                 self.speak_dialog('No.Such.Module')
         else:
-            self.handle_not_connected
+            if ipAddress == '0.0.0.0':
+                self.speak('I was unable to connect to the magic mirror at the default ip address. To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. \
+                What is the I P address of the magic mirror you would like to control with your voice?', expect_response=True)
+
+            else:
+                self.speak('I was unable to connect to the magic mirror. Please verify the I P address and the configuartion of the magic mirror.')
 
 
 
