@@ -70,6 +70,8 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
         self.voiceurl ='http://0.0.0.0:8080/kalliope'
         self.mycroft_utterance=''
         self.moduleData = ''
+        self.connectionStatus = ''
+        self.kalliopeStatus = ''
 
         try:
             with open (join(self._dir, 'ip.json')) as f:
@@ -92,16 +94,33 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
                     if moduleData['name'] == item['name']:
                         moduleData['identifier'] = item['identifier']
             self.moduleData = AvailableData
+            # Added code to see if kalliope module is installed. if not, there is no need to send events to kalliope module
+            data = self.moduleData
+            installed_modules = ''
+            for moduleData in data['moduleData']:
+                mycroftname = moduleData['mycroftname']
+                identifier = moduleData['identifier']
+                if mycroftname == 'kalliope':
+                    if identifier != '':
+                        self.kalliopeStatus = 'installed'
+                    else:
+                        self.kalliopeStatus = 'not installed'
+
+            self.connectionStatus = 'connected'
             self.speak('I have successfully connected to the magic mirror.')
 
         except requests.exceptions.ConnectionError:
             if ipAddress == '0.0.0.0':
+                self.connectionStatus = 'disconnected'
                 self.speak('I was unable to connect to the magic mirror at the default ip address. To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. \
                 what is the I P address of the magic mirror you would like to control with your voice?', expect_response=True)
+
             else:
+                self.connectionStatus = 'disconnected'
                 self.speak('I was unable to connect to the magic mirror at that I P address. Please verify the I P address and that the magic mirror is accessible')
 
         except IOError:
+            self.connectionStatus = 'disconnected'
             self.speak('To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. \
             what is the I P address of the magic mirror you would like to control with your voice', expect_response=True)
 
@@ -112,26 +131,36 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
         self.add_event('recognizer_loop:audio_output_end', self.handle_output_end)
 
     def handle_listen(self, message):
-        voice_payload = {"notification":"KALLIOPE", "payload": "Listening"}
-        r = requests.post(url=self.voiceurl, data=voice_payload)
+        if self.connectionStatus == 'connected':
+            if self.kalliopeStatus == 'installed':
+                voice_payload = {"notification":"KALLIOPE", "payload": "Listening"}
+                r = requests.post(url=self.voiceurl, data=voice_payload)
 
     def handle_utterance(self, message):
-        utterance = message.data.get('utterances')
-        voice_payload = {"notification":"KALLIOPE", "payload": utterance}
-        r = requests.post(url=self.voiceurl, data=voice_payload)
+        if self.connectionStatus == 'connected':
+            if self.kalliopeStatus == 'installed':
+                utterance = message.data.get('utterances')
+                voice_payload = {"notification":"KALLIOPE", "payload": utterance}
+                r = requests.post(url=self.voiceurl, data=voice_payload)
 
     def handle_speak(self, message):
-        self.mycroft_utterance = message.data.get('utterance')
-        #voice_payload = {"notification":"KALLIOPE", "payload": self.mycroft_utterance}
-        #r = requests.post(url=self.voiceurl, data=voice_payload)
+        if self.connectionStatus == 'connected':
+            if self.kalliopeStatus == 'installed':
+                self.mycroft_utterance = message.data.get('utterance')
+                #voice_payload = {"notification":"KALLIOPE", "payload": self.mycroft_utterance}
+                #r = requests.post(url=self.voiceurl, data=voice_payload)
 
     def handle_output(self, message):
-        voice_payload = {"notification":"KALLIOPE", "payload": self.mycroft_utterance}
-        r = requests.post(url=self.voiceurl, data=voice_payload)
+        if self.connectionStatus == 'connected':
+            if self.kalliopeStatus == 'installed':
+                voice_payload = {"notification":"KALLIOPE", "payload": self.mycroft_utterance}
+                r = requests.post(url=self.voiceurl, data=voice_payload)
 
     def handle_output_end(self, message):
-        voice_payload = {"notification":"REMOVE_MESSAGE", "payload": "REMOVE_MESSAGE"}
-        r = requests.post(url=self.voiceurl, data=voice_payload)
+        if self.connectionStatus == 'connected':
+            if self.kalliopeStatus == 'installed':
+                voice_payload = {"notification":"REMOVE_MESSAGE", "payload": "REMOVE_MESSAGE"}
+                r = requests.post(url=self.voiceurl, data=voice_payload)
 
 # The following intent handler is used to set the ip address of the MagicMirror by saving it to a file ip.json
 # The file is saved into the skill's directory which causes Mycroft to reload the skill. After the skill reloads
