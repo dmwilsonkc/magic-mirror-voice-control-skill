@@ -113,7 +113,7 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
             if ipAddress == '0.0.0.0':
                 self.connectionStatus = 'disconnected'
                 self.speak('I was unable to connect to the magic mirror at the default ip address. To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. \
-                what is the I P address of the magic mirror you would like to control with your voice?', expect_response=True)
+                What is the I P address of the magic mirror you would like to control with your voice?', expect_response=True)
 
             else:
                 self.connectionStatus = 'disconnected'
@@ -182,70 +182,83 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
         except:
             self.speak('Im sorry that is not a valid ip address. please try again', expect_response=True)
 
+    def handle_not_connected(self):
+        if ipAddress == '0.0.0.0':
+            self.speak('I was unable to connect to the magic mirror at the default ip address. To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. \
+            What is the I P address of the magic mirror you would like to control with your voice?', expect_response=True)
+
+        else:
+            self.speak('I was unable to connect to the magic mirror. Please verify the I P address and and configuartion of the magic mirror.')
+
 
 # This code builds the SystemActionIntent which are commands that are not directed at a specific module
 
     @intent_handler(IntentBuilder('SystemActionIntent').require('SystemActionKeywords').require('SystemKeywords'))
     def handle_System_command(self, message):
-        system_action = message.data.get('SystemActionKeywords')
-        if system_action in ('hide', 'conceal'):
-            system_action = 'HIDE'
-        if system_action in ('show', 'display'):
-            system_action = 'SHOW'
+        if self.connectionStatus == 'connected':
 
-        System = message.data.get('SystemKeywords')
+            system_action = message.data.get('SystemActionKeywords')
+            if system_action in ('hide', 'conceal'):
+                system_action = 'HIDE'
+            if system_action in ('show', 'display'):
+                system_action = 'SHOW'
 
-# This part of the SystemActionIntent handles one word remote System actions like shutdown, reboot, restart, refresh and update
-# if commands do not make sense as far as 'raspberry pi', 'pi', 'mirror', 'screen',
-# errors will result in mycroft asking the user to rephrase
+            System = message.data.get('SystemKeywords')
 
-        if System in ('raspberry pi', 'pi', 'mirror', 'screen'):
-            if system_action in ('shutdown', 'reboot', 'restart', 'refresh', 'update', 'save'):
-                system_action = system_action.upper() # MMM-Remote-Control wants actions in uppercase
-                payload = {'action': system_action}
-            if system_action == 'turn off':
-                if System in ('raspberry pi', 'pi'):
-                    system_action = 'SHUTDOWN'
+    # This part of the SystemActionIntent handles one word remote System actions like shutdown, reboot, restart, refresh and update
+    # if commands do not make sense as far as 'raspberry pi', 'pi', 'mirror', 'screen',
+    # errors will result in mycroft asking the user to rephrase
+
+            if System in ('raspberry pi', 'pi', 'mirror', 'screen'):
+                if system_action in ('shutdown', 'reboot', 'restart', 'refresh', 'update', 'save'):
+                    system_action = system_action.upper() # MMM-Remote-Control wants actions in uppercase
                     payload = {'action': system_action}
-            if System in ('raspberry pi', 'pi'):
-                if system_action in ('turn on', 'SHOW', 'HIDE', 'save'):
-                    self.speak_dialog('incorrect_command', expect_response=True)
+                if system_action == 'turn off':
+                    if System in ('raspberry pi', 'pi'):
+                        system_action = 'SHUTDOWN'
+                        payload = {'action': system_action}
+                if System in ('raspberry pi', 'pi'):
+                    if system_action in ('turn on', 'SHOW', 'HIDE', 'save'):
+                        self.speak_dialog('incorrect_command', expect_response=True)
 
-# This part of the SystemActionIntent turns on/off the monitor
+    # This part of the SystemActionIntent turns on/off the monitor
 
-        if System in ('monitor', 'mirror', 'screen', 'modules'):
-            if system_action in ('turn on','wake up', 'SHOW'):
-                system_action = 'MONITORON'
-                payload = {'action': system_action}
-            if system_action in ('turn off', 'go to sleep', 'HIDE'):
-                system_action = 'MONITOROFF'
-                payload = {'action': system_action}
+            if System in ('monitor', 'mirror', 'screen', 'modules'):
+                if system_action in ('turn on','wake up', 'SHOW'):
+                    system_action = 'MONITORON'
+                    payload = {'action': system_action}
+                if system_action in ('turn off', 'go to sleep', 'HIDE'):
+                    system_action = 'MONITOROFF'
+                    payload = {'action': system_action}
 
-# This part of the SystemActionIntent will show/hide neewsfeed article details.
-# It defaults to hide article details
+    # This part of the SystemActionIntent will show/hide neewsfeed article details.
+    # It defaults to hide article details
 
-        if System == 'article details':
-            if system_action in ('SHOW', 'turn on', 'refresh'):
-                system_action = 'NOTIFICATION'
-                System = 'ARTICLE_MORE_DETAILS'
+            if System == 'article details':
+                if system_action in ('SHOW', 'turn on', 'refresh'):
+                    system_action = 'NOTIFICATION'
+                    System = 'ARTICLE_MORE_DETAILS'
+                else:
+                    system_action = 'NOTIFICATION'
+                    System = 'ARTICLE_LESS_DETAILS'
+                payload = {'action': system_action, 'notification': System}
+            r = requests.get(url=self.url, params=payload)
+            status = r.json()
+            response = status['status']
+            if response == 'success':
+                self.speak_dialog('success')
             else:
-                system_action = 'NOTIFICATION'
-                System = 'ARTICLE_LESS_DETAILS'
-            payload = {'action': system_action, 'notification': System}
-        r = requests.get(url=self.url, params=payload)
-        status = r.json()
-        response = status['status']
-        if response == 'success':
-            self.speak_dialog('success')
+                reason = status['reason']
+                reason = reason.replace('_', ' ')
+                self.speak('There was an error processing your request. The error was caused by', reason)
         else:
-            reason = status['reason']
-            reason = reason.replace('_', ' ')
-            self.speak('There was an error processing your request. The error was caused by', reason)
+            self.handle_not_connected
 
 # This intent will have mycroft read the installed modules 'mycroftname' so that the user knows which mdules are installed
 
     @intent_handler(IntentBuilder('ListInstalledModulesIntent').require('ListInstalledKeywords').require('SingleModuleKeywords'))
     def handle_list_installed_modules_command(self, message):
+        if self.connectionStatus == 'connected':
             data = self.moduleData
             installed_modules = ''
             for moduleData in data['moduleData']:
@@ -254,67 +267,75 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
                 if identifier != "":
                     installed_modules = installed_modules + ', ' + mycroftname
             self.speak('The currently installed modules are{}'.format(installed_modules))
+        else:
+            self.handle_not_connected
 
 # This intent handles change page commands to be used with the MMM-pages module. The MMM-pages module must be installed
 # for this intent to work. Find it on github @ https://github.com/edward-shen/MMM-pages
 
     @intent_handler(IntentBuilder('ChangePagesIntent').require('PageActionKeywords').require('PageKeywords'))
     def handle_change_pages_command(self, message):
-        page = message.data.get('PageKeywords')
-        if page in ('one', '1', 'home'):
-            integer = 0
-        if page in ('two', '2'):
-            integer = 1
-        if page in ('three', '3'):
-            integer = 2
-        if page in ('four', '4', 'for'):
-            integer = 3
-        if page in ('five', '5'):
-            integer = 4
-        if page in ('six', '6'):
-            integer = 5
-        if page in ('seven', '7'):
-            integer = 6
-        if page in ('eight', '8'):
-            integer = 7
-        if page in ('nine', '9'):
-            integer = 8
-        if page in ('ten', '10'):
-            integer = 9
-        notification = 'PAGE_CHANGED'
-        action = 'NOTIFICATION'
-        payload = {'action': action, 'notification': notification, 'payload': integer}
-        r = requests.get(url=self.url, params=payload)
-        status = r.json()
-        response = status['status']
-        if response == 'success':
-            self.speak_dialog('success')
+        if self.connectionStatus == 'connected':
+            page = message.data.get('PageKeywords')
+            if page in ('one', '1', 'home'):
+                integer = 0
+            if page in ('two', '2'):
+                integer = 1
+            if page in ('three', '3'):
+                integer = 2
+            if page in ('four', '4', 'for'):
+                integer = 3
+            if page in ('five', '5'):
+                integer = 4
+            if page in ('six', '6'):
+                integer = 5
+            if page in ('seven', '7'):
+                integer = 6
+            if page in ('eight', '8'):
+                integer = 7
+            if page in ('nine', '9'):
+                integer = 8
+            if page in ('ten', '10'):
+                integer = 9
+            notification = 'PAGE_CHANGED'
+            action = 'NOTIFICATION'
+            payload = {'action': action, 'notification': notification, 'payload': integer}
+            r = requests.get(url=self.url, params=payload)
+            status = r.json()
+            response = status['status']
+            if response == 'success':
+                self.speak_dialog('success')
+            else:
+                reason = status['reason']
+                reason = reason.replace('_', ' ')
+                self.speak('There was an error processing your request. The error was caused by', reason)
         else:
-            reason = status['reason']
-            reason = reason.replace('_', ' ')
-            self.speak('There was an error processing your request. The error was caused by', reason)
+            self.handle_not_connected
 
 # This intent handles swipe commands to be used with the MMM-pages module. The MMM-pages module must be installed
 # for the swipe intent to work. Find it on github @ https://github.com/edward-shen/MMM-pages
 
     @intent_handler(IntentBuilder('HandleSwipeIntent').require('SwipeActionKeywords').require('LeftRightKeywords'))
     def handle_pages_command(self, message):
-        direction = message.data.get('LeftRightKeywords')
-        if direction == 'right':
-            System = 'PAGE_DECREMENT'
-        if direction == 'left':
-            System = 'PAGE_INCREMENT'
-        action = 'NOTIFICATION'
-        payload = {'action': action, 'notification': System}
-        r = requests.get(url=self.url, params=payload)
-        status = r.json()
-        response = status['status']
-        if response == 'success':
-            self.speak_dialog('success')
+        if self.connectionStatus == 'connected':
+            direction = message.data.get('LeftRightKeywords')
+            if direction == 'right':
+                System = 'PAGE_DECREMENT'
+            if direction == 'left':
+                System = 'PAGE_INCREMENT'
+            action = 'NOTIFICATION'
+            payload = {'action': action, 'notification': System}
+            r = requests.get(url=self.url, params=payload)
+            status = r.json()
+            response = status['status']
+            if response == 'success':
+                self.speak_dialog('success')
+            else:
+                reason = status['reason']
+                reason = reason.replace('_', ' ')
+                self.speak('There was an error processing your request. The error was caused by', reason)
         else:
-            reason = status['reason']
-            reason = reason.replace('_', ' ')
-            self.speak('There was an error processing your request. The error was caused by', reason)
+            self.handle_not_connected
 
 # This intent handles a number of different user utterances for the brightness value, including
 # numbers, numbers followed by %, numbers as words, numbers as words including the word percent.
@@ -322,50 +343,53 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
 
     @intent_handler(IntentBuilder('AdjustBrightnessIntent').require('BrightnessActionKeywords').require('BrightnessValueKeywords'))
     def handle_adjust_brightness_command(self, message):
-        action = 'BRIGHTNESS'
-        value = message.data.get('BrightnessValueKeywords')
-        value_without_spaces = value.replace(' ', '')
-        iswords = str.isalpha(value_without_spaces)
-        if iswords == True:
-            percent_present = re.search('percent', value)
-            if percent_present != None:
-                value = value.replace(' percent', '')
-                with open(join(self._dir, 'numberwords.json')) as f:
-                    data = json.load(f)
-                    for item in data['numberwords']:
-                        if value == item['word']:
-                            value = item['number']
-                            break
-                value = ((value/100)*200)
+        if self.connectionStatus == 'connected':
+            action = 'BRIGHTNESS'
+            value = message.data.get('BrightnessValueKeywords')
+            value_without_spaces = value.replace(' ', '')
+            iswords = str.isalpha(value_without_spaces)
+            if iswords == True:
+                percent_present = re.search('percent', value)
+                if percent_present != None:
+                    value = value.replace(' percent', '')
+                    with open(join(self._dir, 'numberwords.json')) as f:
+                        data = json.load(f)
+                        for item in data['numberwords']:
+                            if value == item['word']:
+                                value = item['number']
+                                break
+                    value = ((value/100)*200)
+                else:
+                    with open(join(self._dir, 'numberwords.json')) as f:
+                        data = json.load(f)
+                        for item in data['numberwords']:
+                            if value == item['word']:
+                                value = item['number']
+                                break
+            # This else handles numbers including numbers with the '%' sign
             else:
-                with open(join(self._dir, 'numberwords.json')) as f:
-                    data = json.load(f)
-                    for item in data['numberwords']:
-                        if value == item['word']:
-                            value = item['number']
-                            break
-        # This else handles numbers including numbers with the '%' sign
-        else:
-            percent_present = (re.search('%', value))
-            if percent_present != None:
-                value = (re.sub('[%]', '', value))
-                value = int(value)
-                value = ((value/100)*200)
-                action = 'BRIGHTNESS'
-                if value < 10:
-                    value = 10
+                percent_present = (re.search('%', value))
+                if percent_present != None:
+                    value = (re.sub('[%]', '', value))
+                    value = int(value)
+                    value = ((value/100)*200)
+                    action = 'BRIGHTNESS'
+                    if value < 10:
+                        value = 10
+                else:
+                    value = int(value)
+            payload = {'action': action, 'value': value}
+            r = requests.get(url=self.url, params=payload)
+            status = r.json()
+            response = status['status']
+            if response == 'success':
+                self.speak_dialog('success')
             else:
-                value = int(value)
-        payload = {'action': action, 'value': value}
-        r = requests.get(url=self.url, params=payload)
-        status = r.json()
-        response = status['status']
-        if response == 'success':
-            self.speak_dialog('success')
+                reason = status['reason']
+                reason = reason.replace('_', ' ')
+                self.speak('There was an error processing your request. The error was caused by', reason)
         else:
-            reason = status['reason']
-            reason = reason.replace('_', ' ')
-            self.speak('There was an error processing your request. The error was caused by', reason)
+            self.handle_not_connected
 
     # This intent handles commands directed at specific modules. Commands include: hide
     #  show, display, conceal, install, add, turn on, turn off, update.
@@ -375,39 +399,42 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
 
     @intent_handler(IntentBuilder('ModuleActionIntent').require('ModuleActionKeywords').require('ModuleKeywords'))
     def handle_module_command(self, message):
-        module_action = message.data.get('ModuleActionKeywords')
-        if module_action in ('hide', 'conceal', 'turn off'):
-            module_action = 'HIDE'
-        if module_action in ('show', 'display', 'turn on'):
-            module_action = 'SHOW'
+        if self.connectionStatus == 'connected':
+            module_action = message.data.get('ModuleActionKeywords')
+            if module_action in ('hide', 'conceal', 'turn off'):
+                module_action = 'HIDE'
+            if module_action in ('show', 'display', 'turn on'):
+                module_action = 'SHOW'
 
-        module = message.data.get('ModuleKeywords')
-        data = self.moduleData
-        for item in data['moduleData']:
-            if module == item['mycroftname']:
-                module_id = item['identifier']
-                module_url = item['URL']
-                module_name =item['name']
+            module = message.data.get('ModuleKeywords')
+            data = self.moduleData
+            for item in data['moduleData']:
+                if module == item['mycroftname']:
+                    module_id = item['identifier']
+                    module_url = item['URL']
+                    module_name =item['name']
 
-        if module_action in ('HIDE', 'SHOW'):
-            module_action = module_action.upper()
-            payload = {'action': module_action, 'module': module_id}
-        if module_action in ('install', 'add'):
-            module_action = 'INSTALL'
-            payload = {'action': module_action, 'url': module_url}
-        if module_action == 'update':
-            module_action = module_action.upper()
-            payload = {'action': module_action, 'module': module_name}
+            if module_action in ('HIDE', 'SHOW'):
+                module_action = module_action.upper()
+                payload = {'action': module_action, 'module': module_id}
+            if module_action in ('install', 'add'):
+                module_action = 'INSTALL'
+                payload = {'action': module_action, 'url': module_url}
+            if module_action == 'update':
+                module_action = module_action.upper()
+                payload = {'action': module_action, 'module': module_name}
 
-        r = requests.get(url=self.url, params=payload)
-        status = r.json()
-        response = status['status']
-        if response == 'success':
-            self.speak_dialog('success')
+            r = requests.get(url=self.url, params=payload)
+            status = r.json()
+            response = status['status']
+            if response == 'success':
+                self.speak_dialog('success')
+            else:
+                reason = status['reason']
+                reason = reason.replace('_', ' ')
+                self.speak_dialog('No.Such.Module')
         else:
-            reason = status['reason']
-            reason = reason.replace('_', ' ')
-            self.speak_dialog('No.Such.Module')
+            self.handle_not_connected
 
 
 
