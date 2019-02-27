@@ -117,7 +117,7 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
 
             else:
                 self.connectionStatus = 'disconnected'
-                self.speak('I was unable to connect to the magic mirror at that I P address. Please verify the I P address and that the magic mirror is accessible.')
+                self.speak_dialog('not.connected')
 
         except IOError:
             self.connectionStatus = 'disconnected'
@@ -166,8 +166,7 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
             self.speak('I was unable to connect to the magic mirror at the default ip address. To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. What is the I P address of the magic mirror you would like to control with your voice?', expect_response=True)
 
         else:
-            self.speak('I was unable to connect to the magic mirror. Please verify the I P address and the configuartion of the magic mirror. If you need to change the I P address I am trying to connect with, you can say. Set I P address 192.168.X.XXX. Where X is your I P address.')
-            self.speak('Be careful not to say. Set I P address to....As I will end up adding the word...to.. at the beginning of the I P address.')
+            self.speak_dialog('not.connected')
 
 # The following intent handler is used to set the ip address of the MagicMirror by saving it to a file ip.json
 # The file is saved into the skill's directory which causes Mycroft to reload the skill. After the skill reloads
