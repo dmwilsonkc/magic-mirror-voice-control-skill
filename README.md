@@ -73,8 +73,6 @@ The skill is configured to connect to the default port of :8080, which is the de
 It can be tricky to properly whitelist the ip of your Mycroft in the MagicMirror's config.js. Instructions can be found [here](https://github.com/Jopyth/MMM-Remote-Control/issues/75).
 
 
-
-
 ## Examples
 * "Hey Mycroft: hide clock"
 * "show clock"
@@ -93,10 +91,6 @@ It can be tricky to properly whitelist the ip of your Mycroft in the MagicMirror
 * "swipe left" (requires pages module to be installed)
 * "swipe right" (requires pages module to be installed)
 * "list installed modules" (Mycroft will tell you which MagicMirror modules are installed)
-
-## To do list
-* set up send notifications to mirror
-* create Mycroft specific MagicMirror module
 
 ## Credits
 * [dmwilsonkc](https://github.com/dmwilsonkc),
