@@ -11,6 +11,7 @@ You must configure the MagicMirror's config.js file to properly whitelist the ip
 In the MagicMirror's config.js:
 
 Replace: address: "localhost", With: address: "0.0.0.0", and
+
 Replace: ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], with ipWhitelist: ["127.0.0.1", "192.168.X.1/24"],
 
 You can use this skill to hide or show modules, update the mirror or individual modules,
