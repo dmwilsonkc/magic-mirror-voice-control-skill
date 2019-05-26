@@ -97,7 +97,9 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
                 AvailableData = json.load(f)
 
             # Check to see which of the Available Modules have an 'identifier' by checking the 'data' requested from the mirror.
-            # Modules with 'identifiers' are installed and configured in the MagicMirror's config.js
+            # Modules with 'identifiers' are installed and configured in the MagicMirror's config.js. As new modules are added to the
+            # config.js, module identifiers may change. If you add new modules to the MagicMirror, this skill needs to be restarted
+            # to update the module identifiers or odd things are possible
             for moduleData in AvailableData['moduleData']:
                 for item in data['moduleData']:
                     if moduleData['name'] == item['name']:
@@ -114,11 +116,12 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
                         self.kalliopeStatus = 'installed'
                     else:
                         self.kalliopeStatus = 'not installed'
-
+            # Set connection status to connected and inform the user
             self.connectionStatus = 'connected'
             self.speak('I have successfully connected to the magic mirror.')
 
         except requests.exceptions.ConnectionError:
+            # If the connection error is because the ip address has not changed from the default
             if ipAddress == '0.0.0.0':
                 self.connectionStatus = 'disconnected'
                 self.speak('I was unable to connect to the magic mirror at the default ip address. To activate the magic-mirror-voice-control-skill I need to know the I P address of the magic mirror. What is the I P address of the magic mirror you would like to control with your voice?', expect_response=True)
