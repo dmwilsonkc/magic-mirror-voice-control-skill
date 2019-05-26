@@ -74,6 +74,9 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
         self.kalliopeStatus = ''
         self.ipAddress = ''
 
+        # Look for the ip address of the MagicMirror in the ip.json file. If for some reason the ip address is incorrect,
+        # or the MagicMirror is unreachable (not on, not properly whitelisted, or some other connectivity issue) the request.get in the
+        # following code will catch the exception and prompt the user to take action. Not sure if this can be done with an If...Then statement.
         try:
             with open (join(self._dir, 'ip.json')) as f:
                 ip = json.load(f)
@@ -83,21 +86,26 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
             self.voiceurl = 'http://' + ipAddress + ':8080/kalliope'
             self.mycroft_utterance = ''
             payload = {'action': 'MODULE_DATA'}
+            # Following line of code requests the module data so Mycroft knows which modules are installed
+            # If the MagicMirror is not reached, this request will cause an exception
             r = requests.get(url=self.url, params=payload)
             data = r.json()
 
-
+            # Open a list of Available Modules. (This should be updated occasionally based on new available modules)
+            # Submit a PR if you'd like me to add new modules to the 'AvailableModules.json'
             with open (join(self._dir, 'AvailableModules.json')) as f:
                 AvailableData = json.load(f)
 
+            # Check to see which of the Available Modules have an 'identifier' by checking the 'data' requested from the mirror.
+            # Modules with 'identifiers' are installed and configured in the MagicMirror's config.js
             for moduleData in AvailableData['moduleData']:
                 for item in data['moduleData']:
                     if moduleData['name'] == item['name']:
                         moduleData['identifier'] = item['identifier']
             self.moduleData = AvailableData
+
             # Added code to see if kalliope module is installed. if not, there is no need to send events to kalliope module
             data = self.moduleData
-            installed_modules = ''
             for moduleData in data['moduleData']:
                 mycroftname = moduleData['mycroftname']
                 identifier = moduleData['identifier']
@@ -347,9 +355,12 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
             value = message.data.get('BrightnessValueKeywords')
             value_without_spaces = value.replace(' ', '')
             iswords = str.isalpha(value_without_spaces)
+            # Sometimes Mycroft recognizes numbers as words, if that is the case, this code recognizes the words and looks
+            # in the 'numberwords.json' file for the corresponding number value. It also checks to see if the user uttered
+            # the word 'percent' and handles adjusting the value as a percentage.
             if iswords == True:
                 percent_present = re.search('percent', value)
-                if percent_present != None:
+                if percent_present is not None:
                     value = value.replace(' percent', '')
                     with open(join(self._dir, 'numberwords.json')) as f:
                         data = json.load(f)
@@ -359,16 +370,18 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
                                 break
                     value = ((value/100)*200)
                 else:
+                    # If the user does not use the word percent, and Mycroft recognized the numbers as words.
                     with open(join(self._dir, 'numberwords.json')) as f:
                         data = json.load(f)
                         for item in data['numberwords']:
                             if value == item['word']:
                                 value = item['number']
                                 break
-            # This else handles numbers including numbers with the '%' sign
+
             else:
+                # This else handles numbers including numbers with the '%' sign
                 percent_present = (re.search('%', value))
-                if percent_present != None:
+                if percent_present is not None:
                     value = (re.sub('[%]', '', value))
                     value = int(value)
                     value = ((value/100)*200)
