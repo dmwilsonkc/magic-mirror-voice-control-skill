@@ -1,7 +1,7 @@
 # Magic Mirror Voice Control
-Give voice commands to Mycroft to control a Magic Mirror using the MMM-Remote-Control module.
+Give voice commands to Mycroft to control a MagicMirror.
 
-## Description
+## About
 This mycroft skill passes commands to an accessible MagicMirror installed anywhere on the same network as Mycroft. It requires a working install of [MagicMirror](https://github.com/MichMich/MagicMirror) and the [MMM-Remote-Control module](https://github.com/Jopyth/MMM-Remote-Control). It must be installed AND ACCESSIBLE ON THE SAME NETWORK AS MYCROFT.
 
 This skill requires MMM-Remote-Control be installed and working properly on the MagicMirror.
@@ -17,6 +17,9 @@ Replace: ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], with ipWhitelist
 You can use this skill to hide or show modules, update the mirror or individual modules,
 refresh or restart the mirror, list installed modules, install modules by name (will still require you
 to configure the MagicMirror config.js by SSH or VNC for the particular skill you install), change pages of modules by either swipe commands or telling mycroft to "go to page [number]"(requires that [MMM-pages](https://github.com/edward-shen/MMM-pages) be installed), restart or reboot the Raspberry Pi.
+
+## Category
+IoT
 
 ## How the skill works
 MMM-Remote-Control requires the module identifier to know which module to
@@ -67,6 +70,7 @@ Be careful to not say "Hey Mycroft...Set mirror ip address to X" because Mycroft
 
 Of course you can always type any of those commands into Mycroft's CLI at any point after the skill is initialized.
 You can also change the ip address that Mycroft tries to connect to the MagicMirror by using any of those commands later if the address of the mirror changes.
+
 ## Important:
 The skill is configured to connect to the default port of :8080, which is the default port of the MagicMirror. If you change default port in the config,js of the MagicMirror, this skill will no longer connect to the MagicMirror.
 
