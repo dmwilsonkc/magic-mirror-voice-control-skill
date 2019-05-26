@@ -1,4 +1,4 @@
-# Magic Mirror Voice Control
+# <img src='https://cdn1.iconfinder.com/data/icons/mirror/512/magic-mirror-look-glass-home-512.png' width='50'/> Magic Mirror Voice Control
 Give voice commands to Mycroft to control a MagicMirror.
 
 ## About
