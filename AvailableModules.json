@@ -2037,6 +2037,12 @@
       "identifier": "",
       "mycroftname": "unsplash",
       "name": "MMM-Unsplash"
+    },
+    {
+      "URL": "https://github.com/bendardenne/MMM-TomTomTraffic",
+      "identifier": "",
+      "mycroftname": "Tom Tom Traffic",
+      "name": "MMM-TomTomTraffic"
     }
   ],
   "settingsVersion": 2,

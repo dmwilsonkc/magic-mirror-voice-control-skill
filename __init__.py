@@ -28,7 +28,7 @@ import json
 import re
 import mycroft.version
 from threading import Thread, Lock
-from mycroft.messagebus.client.ws import WebsocketClient
+from mycroft.messagebus.client import MessageBusClient
 from mycroft.messagebus.message import Message
 from mycroft.util.log import LOG
 from mycroft.tts import TTS
@@ -73,6 +73,7 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
         self.connectionStatus = ''
         self.kalliopeStatus = ''
         self.ipAddress = ''
+        self._dir = '/opt/mycroft/skills/magic-mirror-voice-control-skill'
 
         # Look for the ip address of the MagicMirror in the ip.json file. If for some reason the ip address is incorrect,
         # or the MagicMirror is unreachable (not on, not properly whitelisted, or some other connectivity issue) the request.get in the
