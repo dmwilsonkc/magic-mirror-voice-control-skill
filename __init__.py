@@ -158,8 +158,8 @@ class MagicMirrorVoiceControlSkill(MycroftSkill):
         if self.connectionStatus == 'connected':
             if self.kalliopeStatus == 'installed':
                 self.mycroft_utterance = message.data.get('utterance')
-                #voice_payload = {"notification":"KALLIOPE", "payload": self.mycroft_utterance}
-                #r = requests.post(url=self.voiceurl, data=voice_payload)
+                voice_payload = {"notification":"KALLIOPE", "payload": self.mycroft_utterance}
+                r = requests.post(url=self.voiceurl, data=voice_payload)
 
     def handle_output(self, message):
         if self.connectionStatus == 'connected':
