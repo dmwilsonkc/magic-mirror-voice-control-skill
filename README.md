@@ -1,5 +1,6 @@
 # <img src='https://cdn1.iconfinder.com/data/icons/mirror/512/magic-mirror-look-glass-home-512.png' width='50'/> Magic Mirror Voice Control
 Give voice commands to Mycroft to control a MagicMirror.
+edit by Chanapai
 
 ## About
 This mycroft skill passes commands to an accessible MagicMirror installed anywhere on the same network as Mycroft. It requires a working install of [MagicMirror](https://github.com/MichMich/MagicMirror) and the [MMM-Remote-Control module](https://github.com/Jopyth/MMM-Remote-Control). It must be installed AND ACCESSIBLE ON THE SAME NETWORK AS MYCROFT.
